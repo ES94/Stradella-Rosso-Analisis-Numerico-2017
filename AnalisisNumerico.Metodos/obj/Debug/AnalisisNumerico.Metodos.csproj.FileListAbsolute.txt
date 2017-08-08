@@ -1,0 +1,5 @@
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\bin\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\bin\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.csprojResolveAssemblyReference.cache
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.pdb
