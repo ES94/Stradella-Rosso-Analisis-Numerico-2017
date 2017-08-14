@@ -1,0 +1,26 @@
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.exe.config
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.exe
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.pdb
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csprojResolveAssemblyReference.cache
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\MainWindow.baml
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\MainWindow.g.cs
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\App.g.cs
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI_MarkupCompile.cache
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.g.resources
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.Properties.Resources.resources
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csproj.GenerateResource.Cache
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.exe
+C:\Users\estra\Documents\AnalisisNumerico.UI\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.exe.config
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.exe
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csprojResolveAssemblyReference.cache
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\MainWindow.baml
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\MainWindow.g.cs
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\App.g.cs
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI_MarkupCompile.cache
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.g.resources
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.Properties.Resources.resources
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csproj.GenerateResource.Cache
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.exe
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.pdb
