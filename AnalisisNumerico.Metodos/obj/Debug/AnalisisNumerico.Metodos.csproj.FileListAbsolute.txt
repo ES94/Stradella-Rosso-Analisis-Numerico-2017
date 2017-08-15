@@ -3,3 +3,9 @@ C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\Analisis
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.csprojResolveAssemblyReference.cache
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.dll
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\AnalisisNumerico\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\bin\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\bin\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.csprojResolveAssemblyReference.cache
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\bin\Debug\MathParser.org-mXparser.Net452.dll

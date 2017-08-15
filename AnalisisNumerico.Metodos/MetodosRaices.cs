@@ -8,74 +8,126 @@ namespace AnalisisNumerico.Metodos
 {
     public class MetodosRaices
     {
-        private decimal ResultadosRaices { get; set; }
+        public double? ResultadoRaices
+        {
+            get
+            {
+                return resultadoRaices;
+            }
+        }
 
-        private int TopeIteraciones = 100;
+        public double? ResultadoSistEq
+        {
+            get
+            {
+                return resultadoSistEq;
+            }
+        }
 
-        private decimal ErrorRelativo { get; set; }
+        public double? ResultadoRegInter
+        {
+            get
+            {
+                return resultadoRegInter;
+            }
+        }
 
-        private bool OperacionFallida { get; set; }
+        public double? ResultadoInteg
+        {
+            get
+            {
+                return resultadoInteg;
+            }
+        }
+
+        private double? resultadoRaices;
+        private double? resultadoSistEq;
+        private double? resultadoRegInter;
+        private double? resultadoInteg;
+        private int ITER = 100;
+        private double TOLE = .01;
 
         public double Funcion(double x)
         {
             return Math.Pow((x - 3), 2) - 1;
         }
 
-        private double? Biseccion(double Xi, double Xf)
+        private double? Biseccion(double Xi, double Xd)
         {
-            double? resultado = 0;
+            double? resultado = null;
             int contadorIteraciones = 0;
-            OperacionFallida = false;
-
-            while ((Xi != Xf) && (contadorIteraciones <= TopeIteraciones))
+            
+            if ((Funcion(Xi) * Funcion(Xd)) > 0)
             {
-                double puntoMedio = (Xi + Xf) / 2;
-
-                contadorIteraciones++;
-
-                if (Funcion(puntoMedio) == 0)
+                throw new Exception("Error: debe ingresar parámetros de signos opuestos.");
+            }
+            else if ((Funcion(Xi) * Funcion(Xd)) == 0)
+            {
+                if (Funcion(Xi) == 0)
                 {
-                    resultado = Funcion(puntoMedio);
-
-                    break;
-                }
-                else if ((Funcion(Xi) * Funcion(Xf)) < 0)
-                {
-                    Xf = puntoMedio;
+                    resultado = Xi;
                 }
                 else
                 {
-                    Xi = puntoMedio;
+                    resultado = Xd;
+                }
+            }
+            else
+{
+                int C = 0;
+                double XANT = 0;
+                double ERROR = 0;
+                double XR = 0;
+
+                while (!((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
+                {
+                    C++;
+                    XR = (Xi + Xd) / 2;
+                    ERROR = Math.Abs(XR - XANT) / XR;
+
+                    if ((Funcion(Xi) * Funcion(XR)) > 0)
+                    {
+                        Xi = XR;
+                    }
+                    else
+                    {
+                        Xd = XR;
+                    }
+
+                    XANT = XR;
                 }
 
-            }
-
-            if (Xi == Xf)
-            {
-                resultado = null;
-            }
-
-            if (contadorIteraciones == TopeIteraciones)
-            {
-                OperacionFallida = true;
+                resultado = XR;
             }
 
             return resultado;
         }
 
-        private void ReglaFalsa()
+        public static double? ReglaFalsa()
         {
+            double? resultado = null;
+            int contadorIteraciones = 0;
 
+
+            return resultado;
         }
 
-        private void Newton()
+        public static double? Newton()
         {
+            double? resultado = null;
+            int contadorIteraciones = 0;
 
+
+            return resultado;
         }
 
-        private void Secante()
+        public static double? Secante()
         {
+            double? resultado = null;
+            int contadorIteraciones = 0;
 
+
+            return resultado;
         }
     }
 }
