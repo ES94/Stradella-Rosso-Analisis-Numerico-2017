@@ -395,9 +395,6 @@
       </violation>
     </violations>
   </sourcecode>
-  <project key="-1683142314">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="MainWindow.xaml.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017/08/14 21:01:58.527</styleCop>
@@ -494,4 +491,7 @@
       </violation>
     </violations>
   </sourcecode>
+  <project key="-1683142314">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>
