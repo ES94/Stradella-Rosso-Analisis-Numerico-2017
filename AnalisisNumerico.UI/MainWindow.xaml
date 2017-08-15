@@ -45,12 +45,6 @@
                       Header="Integración" 
                       Foreground="White" 
                       Click="ItmIntegracion_Click"/>
-            <MenuItem Name="itmSalir" 
-                      Width="150" 
-                      Height="50" 
-                      Header="Salir" 
-                      Foreground="White" 
-                      Click="ItmSalir_Click"/>
         </Menu>
         <Menu Name="mnuRaices"
               Width="100" 
@@ -63,22 +57,26 @@
                       Width="100" 
                       Height="50" 
                       Header="Bisección" 
-                      Foreground="White"/>
+                      Foreground="White"
+                      Click="ItmRaicesBiseccion_Click"/>
             <MenuItem Name="itmRaicesReglaFalsa" 
                       Width="100" 
                       Height="50" 
                       Header="Regla falsa" 
-                      Foreground="White"/>
+                      Foreground="White"
+                      Click="ItmRaicesReglaFalsa_Click"/>
             <MenuItem Name="itmRaicesNewton" 
                       Width="100" 
                       Height="50" 
                       Header="Newton" 
-                      Foreground="White"/>
+                      Foreground="White"
+                      Click="ItmRaicesNewton_Click"/>
             <MenuItem Name="itmRaicesSecante" 
                       Width="100" 
                       Height="50" 
                       Header="Secante" 
-                      Foreground="White"/>
+                      Foreground="White"
+                      Click="ItmRaicesSecante_Click"/>
         </Menu>
         <Menu Name="mnuSistEcuaciones"
               Width="200" 
@@ -170,5 +168,10 @@
                       Header="Múltiple" 
                       Foreground="White"/>
         </Menu>
+        <MenuItem Name="itmSalir" 
+                  Header="Salir" 
+                  Margin="432,310,10,10"
+                  Foreground="White" 
+                  Click="ItmSalir_Click"/>
     </Grid>
 </Window>

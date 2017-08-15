@@ -25,5 +25,12 @@ C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.exe
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.pdb
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\RaicesWindow.g.cs
-C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI_MarkupCompile.lref
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\RaicesWindow.baml
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\Gu.Wpf.NumericInput.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\Gu.Wpf.NumericInput.xml
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\cs\Gu.Wpf.NumericInput.resources.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\de\Gu.Wpf.NumericInput.resources.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\nl\Gu.Wpf.NumericInput.resources.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\sv\Gu.Wpf.NumericInput.resources.dll

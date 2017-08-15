@@ -58,7 +58,7 @@
 
             if ((Funcion(Xi) * Funcion(Xd)) > 0)
             {
-                throw new Exception("Error: debe ingresar parámetros de signos opuestos.");
+                resultado = null;
             }
             else if ((Funcion(Xi) * Funcion(Xd)) == 0)
             {

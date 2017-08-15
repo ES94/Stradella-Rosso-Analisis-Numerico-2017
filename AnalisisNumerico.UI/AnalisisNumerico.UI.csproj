@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gu.Wpf.NumericInput, Version=0.5.2.0, Culture=neutral, PublicKeyToken=e6e2e1b32408e0fd, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gu.Wpf.NumericInput.0.5.2.0\lib\net45\Gu.Wpf.NumericInput.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -92,6 +95,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnalisisNumerico.Metodos\AnalisisNumerico.Metodos.csproj">
+      <Project>{5ba13fd2-5846-41e5-bfe4-aa8242f4e3ab}</Project>
+      <Name>AnalisisNumerico.Metodos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

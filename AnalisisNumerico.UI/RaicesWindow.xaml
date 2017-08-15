@@ -1,10 +1,10 @@
-﻿<Window Name="winRaices" 
-        x:Class="AnalisisNumerico.UI.RaicesWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnalisisNumerico.UI"
+        xmlns:numeric="http://gu.se/NumericInput" Name="winRaices" 
+        x:Class="AnalisisNumerico.UI.RaicesWindow"
         mc:Ignorable="d"
         Title="Raíces: ingresar información" Height="300" Width="300" WindowStyle="ToolWindow">
     <Window.Background>
@@ -17,6 +17,30 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
+        <Label Name="lblXI"
+               Content="XI:"
+               Width="30"
+               Height="30"
+               Margin="10,10,252,230"
+               Foreground="White"/>
+        <Label Name="lblXF"
+               Content="XF:"
+               Width="30"
+               Height="30"
+               Margin="90,10,172,230"
+               Foreground="White"/>
+        <numeric:DoubleBox Name="dblXI"
+                           Width="75"
+                           Height="30" 
+                           Margin="10,40,207,200"
+                           TextWrapping="Wrap" 
+                           FlowDirection="RightToLeft"/>
+        <numeric:DoubleBox Name="dblXF"
+                           Width="75"
+                           Height="30" 
+                           Margin="90,40,127,200"
+                           TextWrapping="Wrap"
+                           FlowDirection="RightToLeft"/>
         <Button Name="btnAceptar" 
                 Content="Aceptar" 
                 Background="WhiteSmoke" 
@@ -25,15 +49,17 @@
                 Width="75" 
                 Height="23" 
                 HorizontalAlignment="Right" 
-                VerticalAlignment="Bottom"/>
-        <Button Name="btnCancelar"
-                Content="Cancelar"
+                VerticalAlignment="Bottom"
+                Click="BtnAceptar_Click"/>
+        <Button Name="btnCerrar"
+                Content="Cerrar"
                 Background="WhiteSmoke"
                 Foreground="Black"
                 Margin="0,0,90,10"
                 Width="75"
                 Height="23"
                 HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"/>
+                VerticalAlignment="Bottom" 
+                Click="BtnCancelar_Click"/>
     </Grid>
 </Window>

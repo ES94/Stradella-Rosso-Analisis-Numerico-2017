@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AnalisisNumerico.Metodos;
 
 namespace AnalisisNumerico.UI
 {
@@ -19,9 +20,51 @@ namespace AnalisisNumerico.UI
     /// </summary>
     public partial class RaicesWindow : Window
     {
-        public RaicesWindow()
+        private string botonPresionado;
+
+        public RaicesWindow(string nombreBoton)
         {
             InitializeComponent();
+
+            botonPresionado = nombreBoton;
+        }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnAceptar_Click(object sender, RoutedEventArgs e)
+        {
+            if ((dblXI.Text != "") && (dblXF.Text != ""))
+            {
+                double? resultado = null;
+
+                switch (botonPresionado)
+                {
+                    case "itmRaicesBiseccion":
+                        resultado = MetodosRaices.Biseccion(Convert.ToDouble(dblXI.Text), Convert.ToDouble(dblXF.Text));
+                        break;
+
+                    case "itmRaicesReglaFalsa":
+                        resultado = MetodosRaices.ReglaFalsa();
+                        break;
+
+                    case "itmRaicesNewton":
+                        resultado = MetodosRaices.Newton();
+                        break;
+
+                    case "itmRaicesSecante":
+                        resultado = MetodosRaices.Secante();
+                        break;
+                }
+
+                MessageBox.Show("Resultado: " + (resultado == null ? "no se halló la raíz" : "la raíz es " + resultado.ToString()), "", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Falta suministrar datos en los campos.", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }

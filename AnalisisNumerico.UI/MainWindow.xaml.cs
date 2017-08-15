@@ -21,14 +21,12 @@
     public partial class MainWindow : Window
     {
         private List<Menu> listaMenus;
-        private List<Menu> listaMenusInteg;
 
         public MainWindow()
         {
             InitializeComponent();
 
             listaMenus = new List<Menu>() { mnuRaices, mnuSistEcuaciones, mnuRegInter, mnuIntegracion };
-            listaMenusInteg = new List<Menu>() { mnuSubIntegracion };
         }
 
         private void ItmRaices_Click(object sender, RoutedEventArgs e)
@@ -69,6 +67,34 @@
         private void ItmIntegracionSimpson38_Click(object sender, RoutedEventArgs e)
         {
             this.IntegSelector(itmIntegracionSimpson38.Name);
+        }
+
+        private void ItmRaicesBiseccion_Click(object sender, RoutedEventArgs e)
+        {
+            RaicesWindow win = new RaicesWindow(itmRaicesBiseccion.Name);
+
+            win.ShowDialog();
+        }
+
+        private void ItmRaicesReglaFalsa_Click(object sender, RoutedEventArgs e)
+        {
+            RaicesWindow win = new RaicesWindow(itmRaicesReglaFalsa.Name);
+
+            win.ShowDialog();
+        }
+
+        private void ItmRaicesNewton_Click(object sender, RoutedEventArgs e)
+        {
+            RaicesWindow win = new RaicesWindow(itmRaicesNewton.Name);
+
+            win.ShowDialog();
+        }
+
+        private void ItmRaicesSecante_Click(object sender, RoutedEventArgs e)
+        {
+            RaicesWindow win = new RaicesWindow(itmRaicesSecante.Name);
+
+            win.ShowDialog();
         }
 
         private void Selector(string nombreMenu)
