@@ -1,4 +1,4 @@
-﻿<Window x:Name="winPrincipal" x:Class="AnalisisNumerico.UI.MainWindow"
+﻿<Window Name="winPrincipal" x:Class="AnalisisNumerico.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,14 +11,39 @@
             <GradientStop Color="#FF1A32C5" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid x:Name="griPrincipal">
-        <Menu x:Name="mnuPrincipal" 
+    <Grid Name="griPrincipal">
+        <Menu Name="mnuPrincipal" 
               Height="250" Width="150" Margin="0,0,442,169" Background="{x:Null}">
-            <MenuItem x:Name="itmRaices" Height="50" Width="150" Header="Raíces" Foreground="White" Click="ItmRaices_Click"/>
-            <MenuItem x:Name="itmSistEcuaciones" Height="50" Width="150" Header="Sistema de ecuaciones" Foreground="White" Click="itmSistEcuaciones_Click"/>
-            <MenuItem x:Name="itmRegInter" Height="50" Width="150" Header="Regresión e interpolación" Foreground="White" Click="itmRegInter_Click"/>
-            <MenuItem x:Name="itmIntegracion" Height="50" Width="150" Header="Integración" Foreground="White" Click="itmIntegracion_Click"/>
-            <MenuItem x:Name="itmSalir" Height="50" Width="150" Header="Salir" Foreground="White" Click="ItmSalir_Click"/>
+            <MenuItem Name="itmRaices" Height="50" Width="150" Header="Raíces" Foreground="White" Click="ItmRaices_Click"/>
+            <MenuItem Name="itmSistEcuaciones" Height="50" Width="150" Header="Sistema de ecuaciones" Foreground="White" Click="ItmSistEcuaciones_Click"/>
+            <MenuItem Name="itmRegInter" Height="50" Width="150" Header="Regresión e interpolación" Foreground="White" Click="ItmRegInter_Click"/>
+            <MenuItem Name="itmIntegracion" Height="50" Width="150" Header="Integración" Foreground="White" Click="ItmIntegracion_Click"/>
+            <MenuItem Name="itmSalir" Height="50" Width="150" Header="Salir" Foreground="White" Click="ItmSalir_Click"/>
+        </Menu>
+        <Menu Name="mnuRaices"
+              Height="200" Width="100" Margin="155,0,337,169" Background="{x:Null}" IsEnabled="False" Visibility="Hidden">
+            <MenuItem Name="itmRaicesBiseccion" Height="50" Width="100" Header="Bisección" Foreground="White"/>
+            <MenuItem Name="itmRaicesReglaFalsa" Height="50" Width="100" Header="Regla falsa" Foreground="White"/>
+            <MenuItem Name="itmRaicesNewton" Height="50" Width="100" Header="Newton" Foreground="White"/>
+            <MenuItem Name="itmRaicesSecante" Height="50" Width="100" Header="Secante" Foreground="White"/>
+        </Menu>
+        <Menu Name="mnuSistEcuaciones"
+              Height="200" Width="200" Margin="155,0,237,169" Background="{x:Null}" IsEnabled="False" Visibility="Hidden">
+            <MenuItem Name="itmSistEqElimGaussiana" Height="50" Width="200" Header="Eliminación Gaussiana simple" Foreground="White"/>
+            <MenuItem Name="itmSistEqGaussJordan" Height="50" Width="200" Header="Gauss-Jordan" Foreground="White"/>
+            <MenuItem Name="itmSistEqVonMisses" Height="50" Width="200" Header="Von Misses" Foreground="White"/>
+            <MenuItem Name="itmSistEqGaussSeidel" Height="50" Width="200" Header="Gauss-Seidel" Foreground="White"/>
+        </Menu>
+        <Menu Name="mnuRegInter"
+              Height="100" Width="100" Margin="155,0,337,269" Background="{x:Null}" IsEnabled="False" Visibility="Hidden">
+            <MenuItem Name="itmRegInterRegresion" Height="50" Width="100" Header="Regresión" Foreground="White"/>
+            <MenuItem Name="itmRegInterInterpolacion" Height="50" Width="100" Header="Interpolación" Foreground="White"/>
+        </Menu>
+        <Menu Name="mnuIntegracion"
+              Height="150" Width="100" Margin="155,0,337,219" Background="{x:Null}" IsEnabled="False" Visibility="Hidden">
+            <MenuItem Name="itmIntegracionTrapecios" Height="50" Width="100" Header="Trapecios" Foreground="White"/>
+            <MenuItem Name="itmIntegracionSimpson13" Height="50" Width="100" Header="Simpson 1/3" Foreground="White"/>
+            <MenuItem Name="itmIntegracionSimpson38" Height="50" Width="100" Header="Simpson 3/8" Foreground="White"/>
         </Menu>
     </Grid>
 </Window>

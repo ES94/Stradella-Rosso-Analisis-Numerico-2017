@@ -1,14 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AnalisisNumerico.Metodos
+﻿namespace AnalisisNumerico.Metodos
 {
-    public class MetodosRaices
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using org.mariuszgromada.math.mxparser;
+    using org.mariuszgromada.math.mxparser.mathcollection;
+    using org.mariuszgromada.math.mxparser.parsertokens;
+    using org.mariuszgromada.math.mxparser.regressiontesting;
+    using org.mariuszgromada.math.mxparser.syntaxchecker;
+
+    public static class MetodosRaices
     {
-        public double? ResultadoRaices
+        private static int ITER = 100;
+        private static double TOLE = .01;
+        private static double? resultadoRaices = null;
+        private static double? resultadoSistEq = null;
+        private static double? resultadoRegInter = null;
+        private static double? resultadoInteg = null;
+
+        public static double? ResultadoRaices
         {
             get
             {
@@ -16,7 +28,7 @@ namespace AnalisisNumerico.Metodos
             }
         }
 
-        public double? ResultadoSistEq
+        public static double? ResultadoSistEq
         {
             get
             {
@@ -24,7 +36,7 @@ namespace AnalisisNumerico.Metodos
             }
         }
 
-        public double? ResultadoRegInter
+        public static double? ResultadoRegInter
         {
             get
             {
@@ -32,7 +44,7 @@ namespace AnalisisNumerico.Metodos
             }
         }
 
-        public double? ResultadoInteg
+        public static double? ResultadoInteg
         {
             get
             {
@@ -40,23 +52,10 @@ namespace AnalisisNumerico.Metodos
             }
         }
 
-        private double? resultadoRaices;
-        private double? resultadoSistEq;
-        private double? resultadoRegInter;
-        private double? resultadoInteg;
-        private int ITER = 100;
-        private double TOLE = .01;
-
-        public double Funcion(double x)
-        {
-            return Math.Pow((x - 3), 2) - 1;
-        }
-
-        private double? Biseccion(double Xi, double Xd)
+        public static double? Biseccion(double Xi, double Xd)
         {
             double? resultado = null;
-            int contadorIteraciones = 0;
-            
+
             if ((Funcion(Xi) * Funcion(Xd)) > 0)
             {
                 throw new Exception("Error: debe ingresar parámetros de signos opuestos.");
@@ -73,18 +72,14 @@ namespace AnalisisNumerico.Metodos
                 }
             }
             else
-{
+            {
                 int C = 0;
                 double XANT = 0;
-                double ERROR = 0;
-                double XR = 0;
+                double XR = (Xi + Xd) / 2;
+                double ERROR = Math.Abs(XR - XANT) / XR;
 
                 while (!((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
                 {
-                    C++;
-                    XR = (Xi + Xd) / 2;
-                    ERROR = Math.Abs(XR - XANT) / XR;
-
                     if ((Funcion(Xi) * Funcion(XR)) > 0)
                     {
                         Xi = XR;
@@ -94,7 +89,10 @@ namespace AnalisisNumerico.Metodos
                         Xd = XR;
                     }
 
+                    C++;
                     XANT = XR;
+                    XR = (Xi + Xd) / 2;
+                    ERROR = Math.Abs(XR - XANT) / XR;
                 }
 
                 resultado = XR;
@@ -106,8 +104,6 @@ namespace AnalisisNumerico.Metodos
         public static double? ReglaFalsa()
         {
             double? resultado = null;
-            int contadorIteraciones = 0;
-
 
             return resultado;
         }
@@ -115,19 +111,20 @@ namespace AnalisisNumerico.Metodos
         public static double? Newton()
         {
             double? resultado = null;
-            int contadorIteraciones = 0;
-
-
+            
             return resultado;
         }
 
         public static double? Secante()
         {
             double? resultado = null;
-            int contadorIteraciones = 0;
-
-
+            
             return resultado;
+        }
+
+        private static double Funcion(double x)
+        {
+            return Math.Pow(x - 3, 2) - 1;
         }
     }
 }
