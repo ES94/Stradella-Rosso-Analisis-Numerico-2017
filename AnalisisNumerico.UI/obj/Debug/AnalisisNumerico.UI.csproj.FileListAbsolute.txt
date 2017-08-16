@@ -34,3 +34,8 @@ C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\de\Gu.Wpf.NumericInput.resources.dll
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\nl\Gu.Wpf.NumericInput.resources.dll
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\sv\Gu.Wpf.NumericInput.resources.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\DynamicDataDisplay.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\DynamicDataDisplay.Maps.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\DynamicDataDisplay.Markers.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\DynamicDataDisplay.Markers2.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\Parser.dll

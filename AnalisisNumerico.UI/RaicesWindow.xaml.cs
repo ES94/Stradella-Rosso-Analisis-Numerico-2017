@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using AnalisisNumerico.Metodos;
-
+﻿
 namespace AnalisisNumerico.UI
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Shapes;
+    using AnalisisNumerico.Metodos;
+
     /// <summary>
     /// Lógica de interacción para RaicesWindow.xaml
     /// </summary>
@@ -24,9 +25,9 @@ namespace AnalisisNumerico.UI
 
         public RaicesWindow(string nombreBoton)
         {
-            InitializeComponent();
-
-            botonPresionado = nombreBoton;
+            this.InitializeComponent();
+            
+            this.botonPresionado = nombreBoton;
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
@@ -59,7 +60,7 @@ namespace AnalisisNumerico.UI
                         break;
                 }
 
-                MessageBox.Show("Resultado: " + (resultado == null ? "no se halló la raíz" : "la raíz es " + resultado.ToString()), "", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Resultado: " + (resultado == null ? "no se halló la raíz" : "la raíz es " + resultado.ToString()) + ".", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
