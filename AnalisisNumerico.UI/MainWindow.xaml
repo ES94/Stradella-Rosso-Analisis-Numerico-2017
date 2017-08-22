@@ -18,7 +18,7 @@
     <Grid Name="griPrincipal">
         <Menu Name="mnuPrincipal"
               Width="150"
-              Height="250"
+              Height="200"
               Margin="0,0,442,169" 
               Background="{x:Null}">
             <MenuItem Name="itmRaices" 
