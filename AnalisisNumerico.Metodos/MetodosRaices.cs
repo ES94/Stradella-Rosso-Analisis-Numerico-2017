@@ -1,16 +1,16 @@
-﻿namespace AnalisisNumerico.Metodos
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using org.mariuszgromada.math.mxparser;
-    using org.mariuszgromada.math.mxparser.mathcollection;
-    using org.mariuszgromada.math.mxparser.parsertokens;
-    using org.mariuszgromada.math.mxparser.regressiontesting;
-    using org.mariuszgromada.math.mxparser.syntaxchecker;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using org.mariuszgromada.math.mxparser;
+using org.mariuszgromada.math.mxparser.mathcollection;
+using org.mariuszgromada.math.mxparser.parsertokens;
+using org.mariuszgromada.math.mxparser.regressiontesting;
+using org.mariuszgromada.math.mxparser.syntaxchecker;
 
+namespace AnalisisNumerico.Metodos
+{
     public static class MetodosRaices
     {
         private static int ITER = 100;
@@ -111,14 +111,14 @@
         public static double? Newton()
         {
             double? resultado = null;
-            
+
             return resultado;
         }
 
         public static double? Secante()
         {
             double? resultado = null;
-            
+
             return resultado;
         }
 

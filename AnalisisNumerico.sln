@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalisisNumerico.Metodos", "AnalisisNumerico.Metodos\AnalisisNumerico.Metodos.csproj", "{5BA13FD2-5846-41E5-BFE4-AA8242F4E3AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalisisNumerico.UI", "AnalisisNumerico.UI\AnalisisNumerico.UI.csproj", "{937D90EB-FF14-4D39-9E60-C0D886EB1EAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalisisNumerico.UI", "AnalisisNumerico.UI\AnalisisNumerico.UI.csproj", "{31782EE1-4559-44DD-B57E-832E59431EFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5BA13FD2-5846-41E5-BFE4-AA8242F4E3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BA13FD2-5846-41E5-BFE4-AA8242F4E3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BA13FD2-5846-41E5-BFE4-AA8242F4E3AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{937D90EB-FF14-4D39-9E60-C0D886EB1EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{937D90EB-FF14-4D39-9E60-C0D886EB1EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{937D90EB-FF14-4D39-9E60-C0D886EB1EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{937D90EB-FF14-4D39-9E60-C0D886EB1EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31782EE1-4559-44DD-B57E-832E59431EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31782EE1-4559-44DD-B57E-832E59431EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31782EE1-4559-44DD-B57E-832E59431EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31782EE1-4559-44DD-B57E-832E59431EFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
