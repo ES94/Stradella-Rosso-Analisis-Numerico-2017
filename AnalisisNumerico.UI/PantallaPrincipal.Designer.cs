@@ -28,117 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mnuPantallaPrincipal = new System.Windows.Forms.MenuStrip();
-            this.raícesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnBiseccion = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnReglaFalsa = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnTangente = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSecante = new System.Windows.Forms.ToolStripMenuItem();
-            this.sistemasDeEcuacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regresiónEInterpolaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.integraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuPantallaPrincipal.SuspendLayout();
+            this.btnBiseccion = new System.Windows.Forms.Button();
+            this.btnReglaFalsa = new System.Windows.Forms.Button();
+            this.btnTangente = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // mnuPantallaPrincipal
-            // 
-            this.mnuPantallaPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.raícesToolStripMenuItem,
-            this.sistemasDeEcuacionesToolStripMenuItem,
-            this.regresiónEInterpolaciónToolStripMenuItem,
-            this.integraciónToolStripMenuItem});
-            this.mnuPantallaPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.mnuPantallaPrincipal.Name = "mnuPantallaPrincipal";
-            this.mnuPantallaPrincipal.Size = new System.Drawing.Size(584, 24);
-            this.mnuPantallaPrincipal.TabIndex = 0;
-            // 
-            // raícesToolStripMenuItem
-            // 
-            this.raícesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBiseccion,
-            this.btnReglaFalsa,
-            this.btnTangente,
-            this.btnSecante});
-            this.raícesToolStripMenuItem.Name = "raícesToolStripMenuItem";
-            this.raícesToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.raícesToolStripMenuItem.Text = "Raíces";
             // 
             // btnBiseccion
             // 
+            this.btnBiseccion.Location = new System.Drawing.Point(89, 66);
             this.btnBiseccion.Name = "btnBiseccion";
-            this.btnBiseccion.Size = new System.Drawing.Size(152, 22);
-            this.btnBiseccion.Text = "Bisección";
-            this.btnBiseccion.Click += new System.EventHandler(this.AbrirVentanaRaices);
+            this.btnBiseccion.Size = new System.Drawing.Size(246, 80);
+            this.btnBiseccion.TabIndex = 0;
+            this.btnBiseccion.Text = "BISECCION";
+            this.btnBiseccion.UseVisualStyleBackColor = true;
+            this.btnBiseccion.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnReglaFalsa
             // 
+            this.btnReglaFalsa.Location = new System.Drawing.Point(383, 66);
             this.btnReglaFalsa.Name = "btnReglaFalsa";
-            this.btnReglaFalsa.Size = new System.Drawing.Size(152, 22);
-            this.btnReglaFalsa.Text = "Regla falsa";
-            this.btnReglaFalsa.Click += new System.EventHandler(this.AbrirVentanaRaices);
+            this.btnReglaFalsa.Size = new System.Drawing.Size(246, 80);
+            this.btnReglaFalsa.TabIndex = 1;
+            this.btnReglaFalsa.Text = "REGLA FALSA";
+            this.btnReglaFalsa.UseVisualStyleBackColor = true;
+            this.btnReglaFalsa.Click += new System.EventHandler(this.btnReglaFalsa_Click);
             // 
             // btnTangente
             // 
+            this.btnTangente.Location = new System.Drawing.Point(89, 191);
             this.btnTangente.Name = "btnTangente";
-            this.btnTangente.Size = new System.Drawing.Size(152, 22);
-            this.btnTangente.Text = "Tangente";
-            this.btnTangente.Click += new System.EventHandler(this.AbrirVentanaRaices);
-            // 
-            // btnSecante
-            // 
-            this.btnSecante.Name = "btnSecante";
-            this.btnSecante.Size = new System.Drawing.Size(152, 22);
-            this.btnSecante.Text = "Secante";
-            this.btnSecante.Click += new System.EventHandler(this.AbrirVentanaRaices);
-            // 
-            // sistemasDeEcuacionesToolStripMenuItem
-            // 
-            this.sistemasDeEcuacionesToolStripMenuItem.Name = "sistemasDeEcuacionesToolStripMenuItem";
-            this.sistemasDeEcuacionesToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
-            this.sistemasDeEcuacionesToolStripMenuItem.Text = "Sistemas de ecuaciones";
-            // 
-            // regresiónEInterpolaciónToolStripMenuItem
-            // 
-            this.regresiónEInterpolaciónToolStripMenuItem.Name = "regresiónEInterpolaciónToolStripMenuItem";
-            this.regresiónEInterpolaciónToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
-            this.regresiónEInterpolaciónToolStripMenuItem.Text = "Regresión e Interpolación";
-            // 
-            // integraciónToolStripMenuItem
-            // 
-            this.integraciónToolStripMenuItem.Name = "integraciónToolStripMenuItem";
-            this.integraciónToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.integraciónToolStripMenuItem.Text = "Integración";
+            this.btnTangente.Size = new System.Drawing.Size(246, 80);
+            this.btnTangente.TabIndex = 2;
+            this.btnTangente.Text = "TANGENTE";
+            this.btnTangente.UseVisualStyleBackColor = true;
+            this.btnTangente.Click += new System.EventHandler(this.btnTangente_Click);
             // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(584, 24);
-            this.Controls.Add(this.mnuPantallaPrincipal);
-            this.MainMenuStrip = this.mnuPantallaPrincipal;
+            this.ClientSize = new System.Drawing.Size(696, 381);
+            this.Controls.Add(this.btnTangente);
+            this.Controls.Add(this.btnReglaFalsa);
+            this.Controls.Add(this.btnBiseccion);
             this.Name = "PantallaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Análisis Numérico";
             this.Load += new System.EventHandler(this.FrmPantallaPrincipal_Load);
-            this.mnuPantallaPrincipal.ResumeLayout(false);
-            this.mnuPantallaPrincipal.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip mnuPantallaPrincipal;
-        private System.Windows.Forms.ToolStripMenuItem raícesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnBiseccion;
-        private System.Windows.Forms.ToolStripMenuItem btnReglaFalsa;
-        private System.Windows.Forms.ToolStripMenuItem btnTangente;
-        private System.Windows.Forms.ToolStripMenuItem btnSecante;
-        private System.Windows.Forms.ToolStripMenuItem sistemasDeEcuacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regresiónEInterpolaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem integraciónToolStripMenuItem;
+        private System.Windows.Forms.Button btnBiseccion;
+        private System.Windows.Forms.Button btnReglaFalsa;
+        private System.Windows.Forms.Button btnTangente;
     }
 }
 

@@ -31,5 +31,23 @@ namespace AnalisisNumerico.UI
             win.Text += (sender as ToolStripMenuItem).Text;
             win.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia();
+            Raiz.Show();
+        }
+
+        private void btnReglaFalsa_Click(object sender, EventArgs e)
+        {
+            RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia();
+            Raiz.Show();
+        }
+
+        private void btnTangente_Click(object sender, EventArgs e)
+        {
+            RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia();
+            Raiz.Show();
+        }
     }
 }

@@ -32,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aga.Controls">
+      <HintPath>..\..\..\..\Cronometro Mauri\Cronometro\packages\Numeric TextBox\Aga.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnalisisNumerico.Metodos\AnalisisNumerico.Metodos.csproj">
+      <Project>{5ba13fd2-5846-41e5-bfe4-aa8242f4e3ab}</Project>
+      <Name>AnalisisNumerico.Metodos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

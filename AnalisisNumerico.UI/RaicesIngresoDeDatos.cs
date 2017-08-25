@@ -33,5 +33,27 @@ namespace AnalisisNumerico.UI
         {
             instancia = null;
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            if (ntxtXi.Text != "" && ntxtXd.Text != "")
+            {
+                double? Resultado = Metodos.MetodosRaices.Biseccion(Convert.ToDouble(ntxtXi.Text), Convert.ToDouble(ntxtXd.Text));
+                if (Resultado == null)
+                {
+                    MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("¡Rellene todos los campos para continuar!", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
     }
 }

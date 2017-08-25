@@ -8,3 +8,16 @@ C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.pdb
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.PantallaPrincipal.resources
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.RaicesIngresoDeDatos.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.exe.config
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.exe
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.UI.pdb
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\Aga.Controls.dll
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csprojResolveAssemblyReference.cache
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.PantallaPrincipal.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.Properties.Resources.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.RaicesIngresoDeDatos.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csproj.GenerateResource.Cache
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.exe
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.pdb
