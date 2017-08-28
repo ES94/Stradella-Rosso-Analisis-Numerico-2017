@@ -21,3 +21,5 @@ C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Anali
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.csproj.GenerateResource.Cache
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.exe
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.pdb
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\AnalisisNumerico.Metodos.pdb

@@ -149,6 +149,7 @@ namespace AnalisisNumerico.Metodos
 
             return resultado;
         }
+
         private static double FalsaDerivada(double XINI)
         {
             double Derivada;
@@ -167,6 +168,7 @@ namespace AnalisisNumerico.Metodos
 
             return Derivada;
         }
+
         public static double? Newton(double XINI)
         {
             double? resultado = null;
@@ -200,9 +202,36 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
-        public static double? Secante()
+        public static double? Secante(double XINI, double XANT)
         {
             double? resultado = null;
+            double XR = 0;
+            double ERROR = 0;
+
+            if (Math.Abs(Funcion(XINI)) < TOLE)
+            {
+                resultado = XINI;
+            }
+            else
+            {
+                for (int i = 0; i < ITER; i++)
+                {
+                    XR = ((Funcion(XANT) * XINI) - (Funcion(XINI) * XANT)) / (Funcion(XANT) - Funcion(XINI));
+                    ERROR = Math.Abs(XR - XANT) / XR;
+
+                    if ((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        XINI = XANT;
+                        XANT = XR;
+                    }
+                }
+
+                resultado = XR;
+            }
 
             return resultado;
         }
