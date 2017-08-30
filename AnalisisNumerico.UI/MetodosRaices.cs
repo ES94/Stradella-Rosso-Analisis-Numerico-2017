@@ -46,5 +46,10 @@ namespace AnalisisNumerico.UI
             RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia(MetodoAEjecutar);
             Raiz.Show();
         }
+
+        private void MetodosRaices_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

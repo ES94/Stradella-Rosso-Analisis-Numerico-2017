@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.ntxtXi = new Aga.Controls.NumericTextBox();
             this.ntxtXd = new Aga.Controls.NumericTextBox();
             this.lblxi = new System.Windows.Forms.Label();
             this.lblxd = new System.Windows.Forms.Label();
-            this.lineChart1 = new MindFusion.Charting.WinForms.LineChart();
+            this.Graficador = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFunc = new System.Windows.Forms.TextBox();
+            this.btnGraficar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Graficador)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCalcular
@@ -82,30 +88,53 @@
             this.lblxd.TabIndex = 4;
             this.lblxd.Text = "XD";
             // 
-            // lineChart1
+            // Graficador
             // 
-            this.lineChart1.DateTimeFormat = null;
-            this.lineChart1.LegendTitle = "Legend";
-            this.lineChart1.Location = new System.Drawing.Point(34, 70);
-            this.lineChart1.Name = "lineChart1";
-            this.lineChart1.Padding = new System.Windows.Forms.Padding(5);
-            this.lineChart1.ShowLegend = true;
-            this.lineChart1.Size = new System.Drawing.Size(535, 275);
-            this.lineChart1.SubtitleFontName = null;
-            this.lineChart1.SubtitleFontSize = null;
-            this.lineChart1.SubtitleFontStyle = null;
-            this.lineChart1.TabIndex = 5;
-            this.lineChart1.Text = "lineChart1";
-            this.lineChart1.TitleFontName = null;
-            this.lineChart1.TitleFontSize = null;
-            this.lineChart1.TitleFontStyle = null;
+            chartArea2.Name = "ChartArea1";
+            this.Graficador.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.Graficador.Legends.Add(legend2);
+            this.Graficador.Location = new System.Drawing.Point(20, 64);
+            this.Graficador.Name = "Graficador";
+            this.Graficador.Size = new System.Drawing.Size(582, 295);
+            this.Graficador.TabIndex = 5;
+            this.Graficador.Text = "chart1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(351, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "F (X) =";
+            // 
+            // txtFunc
+            // 
+            this.txtFunc.Location = new System.Drawing.Point(395, 27);
+            this.txtFunc.Name = "txtFunc";
+            this.txtFunc.Size = new System.Drawing.Size(117, 20);
+            this.txtFunc.TabIndex = 8;
+            // 
+            // btnGraficar
+            // 
+            this.btnGraficar.Location = new System.Drawing.Point(527, 25);
+            this.btnGraficar.Name = "btnGraficar";
+            this.btnGraficar.Size = new System.Drawing.Size(75, 23);
+            this.btnGraficar.TabIndex = 9;
+            this.btnGraficar.Text = "Graficar";
+            this.btnGraficar.UseVisualStyleBackColor = true;
+            this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
             // 
             // RaicesIngresoDeDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 421);
-            this.Controls.Add(this.lineChart1);
+            this.Controls.Add(this.btnGraficar);
+            this.Controls.Add(this.txtFunc);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Graficador);
             this.Controls.Add(this.lblxd);
             this.Controls.Add(this.lblxi);
             this.Controls.Add(this.ntxtXd);
@@ -115,6 +144,7 @@
             this.Text = "Ingreso de datos: ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RaicesIngresoDeDatos_FormClosed);
             this.Load += new System.EventHandler(this.RaicesIngresoDeDatos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Graficador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,6 +157,9 @@
         private Aga.Controls.NumericTextBox ntxtXd;
         private System.Windows.Forms.Label lblxi;
         private System.Windows.Forms.Label lblxd;
-        private MindFusion.Charting.WinForms.LineChart lineChart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Graficador;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFunc;
+        private System.Windows.Forms.Button btnGraficar;
     }
 }

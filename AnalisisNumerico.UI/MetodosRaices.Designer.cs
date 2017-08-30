@@ -104,11 +104,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 264);
+            this.ClientSize = new System.Drawing.Size(567, 263);
             this.Controls.Add(this.gbxMetodosAbiertos);
             this.Controls.Add(this.gbxMetodosCerrados);
             this.Name = "MetodosRaices";
             this.Text = "MetodosRaices";
+            this.Load += new System.EventHandler(this.MetodosRaices_Load);
             this.gbxMetodosAbiertos.ResumeLayout(false);
             this.gbxMetodosCerrados.ResumeLayout(false);
             this.ResumeLayout(false);

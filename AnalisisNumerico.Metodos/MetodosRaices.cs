@@ -101,6 +101,7 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
+        
         public static double? ReglaFalsa(double Xi, double Xd)
         {
             double? resultado = null;
@@ -241,5 +242,16 @@ namespace AnalisisNumerico.Metodos
             //return Math.Pow(x - 3, 2) - 1;
             return (0.5 * x - 4);
         }
+        //private static double FuncionAGraficar(string f, double x)
+        //{
+        //    Function funcion = new Function(f);
+        //    string argumento = "x = " + Convert.ToString(x).Replace(',', ':');
+        //    Argument argument = new Argument(argumento);
+        //    Expression r = new Expression("f(x)", funcion, argument);
+
+        //    var a = r.calculate();
+
+        //    return a;
+        //}
     }
 }
