@@ -1,0 +1,36 @@
+.d3_tooltip{
+
+    font-size: 16px;
+    opacity: 0;
+    position: absolute;
+    background-color: #E9DDED;
+    padding: 5px;
+    border-radius: 3px;
+
+}
+
+.d3_legend{
+    position: absolute;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #4E5E6A;
+  shape-rendering: crispEdges;
+}
+
+.axis text{
+
+    fill: #4E5E6A;
+
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.tick line{
+  opacity: 0.2;
+}

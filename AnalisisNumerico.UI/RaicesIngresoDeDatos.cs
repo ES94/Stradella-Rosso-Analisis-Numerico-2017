@@ -14,18 +14,49 @@ namespace AnalisisNumerico.UI
     {
         private static RaicesIngresoDeDatos instancia = null;
 
-        private RaicesIngresoDeDatos()
+        private RaicesIngresoDeDatos(string Metodo)
         {
             InitializeComponent();
+            MetodoProveniente = Metodo;
+            switch (MetodoProveniente)
+            {
+                case "Biseccion":
+                    lblxi.Visible = true;
+                    ntxtXi.Visible = true;
+                    lblxd.Visible = true;
+                    ntxtXd.Visible = true;
+                    break;
+                case "ReglaFalsa":
+                    lblxi.Visible = true;
+                    ntxtXi.Visible = true;
+                    lblxd.Visible = true;
+                    ntxtXd.Visible = true;
+                    break;
+                case "Tangente":
+                    lblxi.Visible = true;
+                    ntxtXi.Visible = true;
+                    lblxd.Visible = false;
+                    ntxtXd.Visible = false;
+                    break;
+                case "Secante":
+                    lblxi.Visible = true;
+                    ntxtXi.Visible = true;
+                    lblxd.Visible = true;
+                    ntxtXd.Visible = true;
+                    break;
+                default:
+                    break;
+            }
         }
 
-        public static RaicesIngresoDeDatos ObtenerInstancia()
+        public string MetodoProveniente { get; set; }
+
+        public static RaicesIngresoDeDatos ObtenerInstancia(string Metodo)
         {
             if (instancia == null)
             {
-                instancia = new RaicesIngresoDeDatos();
+                instancia = new RaicesIngresoDeDatos(Metodo);
             }
-
             return instancia;
         }
 
@@ -36,24 +67,99 @@ namespace AnalisisNumerico.UI
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            if (ntxtXi.Text != "" && ntxtXd.Text != "")
+            if (MetodoProveniente == "Biseccion")
             {
-                double? Resultado = Metodos.MetodosRaices.Biseccion(Convert.ToDouble(ntxtXi.Text), Convert.ToDouble(ntxtXd.Text));
-                if (Resultado == null)
+ 
+                if (ntxtXi.Text != "" && ntxtXd.Text != "")
                 {
-                    MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    double? Resultado = Metodos.MetodosRaices.Biseccion(Convert.ToDouble(ntxtXi.Text), Convert.ToDouble(ntxtXd.Text));
+                    if (Resultado == null)
+                    {
+                        MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("¡Rellene todos los campos para continuar!", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
             }
             else
             {
-                MessageBox.Show("¡Rellene todos los campos para continuar!", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (MetodoProveniente == "ReglaFalsa")
+                {
+
+                    if (ntxtXi.Text != "" && ntxtXd.Text != "")
+                    {
+                        double? Resultado = Metodos.MetodosRaices.ReglaFalsa(Convert.ToDouble(ntxtXi.Text), Convert.ToDouble(ntxtXd.Text));
+                        if (Resultado == null)
+                        {
+                            MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("¡Rellene todos los campos para continuar!", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (MetodoProveniente == "Tangente")
+                    {                     
+                        if (ntxtXi.Text != "")
+                        {
+                            double? Resultado = Metodos.MetodosRaices.Newton(Convert.ToDouble(ntxtXi.Text));
+                            if (Resultado == null)
+                            {
+                                MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("¡Rellene todos los campos para continuar!", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        if (MetodoProveniente == "Secante")
+                        {
+
+                            if (ntxtXi.Text != "" && ntxtXd.Text != "")
+                            {
+                                double? Resultado = Metodos.MetodosRaices.Secante(Convert.ToDouble(ntxtXi.Text), Convert.ToDouble(ntxtXd.Text));
+                                if (Resultado == null)
+                                {
+                                    MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("¡Rellene todos los campos para continuar!", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
             }
-           
+        }
+
+        private void RaicesIngresoDeDatos_Load(object sender, EventArgs e)
+        {
+            lineChart1.LegendTitle = "Leyenda Grafico";
         }
     }
 }

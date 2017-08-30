@@ -24,30 +24,10 @@ namespace AnalisisNumerico.UI
             this.Location = new Point(0, scr.WorkingArea.Top);
         }
 
-        private void AbrirVentanaRaices(object sender, EventArgs e)
+        private void btnBiseccion_Click(object sender, EventArgs e)
         {
-            var win = RaicesIngresoDeDatos.ObtenerInstancia();
-            
-            win.Text += (sender as ToolStripMenuItem).Text;
-            win.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia();
-            Raiz.Show();
-        }
-
-        private void btnReglaFalsa_Click(object sender, EventArgs e)
-        {
-            RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia();
-            Raiz.Show();
-        }
-
-        private void btnTangente_Click(object sender, EventArgs e)
-        {
-            RaicesIngresoDeDatos Raiz = RaicesIngresoDeDatos.ObtenerInstancia();
-            Raiz.Show();
+            MetodosRaices FormRaiz = new MetodosRaices();
+            FormRaiz.Show();
         }
     }
 }
