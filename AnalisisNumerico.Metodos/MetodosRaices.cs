@@ -13,8 +13,8 @@ namespace AnalisisNumerico.Metodos
 {
     public static class MetodosRaices
     {
-        private static int ITER = 100;
-        private static double TOLE = .01;
+        public static int ITER { get; set; }
+        public static double TOLE { get; set; }
         private static double? resultadoRaices = null;
         private static double? resultadoSistEq = null;
         private static double? resultadoRegInter = null;
@@ -239,8 +239,8 @@ namespace AnalisisNumerico.Metodos
 
         private static double Funcion(double x)
         {
-            //return Math.Pow(x - 3, 2) - 1;
-            return (0.5 * x - 4);
+            return Math.Pow(x - 3, 2) - 1;
+            //return (0.5 * x - 4);
         }
         //private static double FuncionAGraficar(string f, double x)
         //{
