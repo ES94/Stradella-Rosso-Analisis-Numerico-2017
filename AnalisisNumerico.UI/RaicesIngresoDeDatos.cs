@@ -77,7 +77,7 @@ namespace AnalisisNumerico.UI
  
                 if (ntxtXi.Text != "" && ntxtXd.Text != "")
                 {
-                    double? Resultado = Metodos.MetodosRaices.Biseccion(System.Convert.ToDouble(ntxtXi.Text), System.Convert.ToDouble(ntxtXd.Text));
+                    double? Resultado = Metodos.MetodosRaices.Biseccion(txtFunc.Text, System.Convert.ToDouble(ntxtXi.Text), System.Convert.ToDouble(ntxtXd.Text));
                     if (Resultado == null)
                     {
                         MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -99,7 +99,7 @@ namespace AnalisisNumerico.UI
 
                     if (ntxtXi.Text != "" && ntxtXd.Text != "")
                     {
-                        double? Resultado = Metodos.MetodosRaices.ReglaFalsa(System.Convert.ToDouble(ntxtXi.Text), System.Convert.ToDouble(ntxtXd.Text));
+                        double? Resultado = Metodos.MetodosRaices.ReglaFalsa(txtFunc.Text, System.Convert.ToDouble(ntxtXi.Text), System.Convert.ToDouble(ntxtXd.Text));
                         if (Resultado == null)
                         {
                             MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -120,7 +120,7 @@ namespace AnalisisNumerico.UI
                     {                     
                         if (ntxtXi.Text != "")
                         {
-                            double? Resultado = Metodos.MetodosRaices.Newton(System.Convert.ToDouble(ntxtXi.Text));
+                            double? Resultado = Metodos.MetodosRaices.Newton(txtFunc.Text, System.Convert.ToDouble(ntxtXi.Text));
                             if (Resultado == null)
                             {
                                 MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,7 +142,7 @@ namespace AnalisisNumerico.UI
 
                             if (ntxtXi.Text != "" && ntxtXd.Text != "")
                             {
-                                double? Resultado = Metodos.MetodosRaices.Secante(System.Convert.ToDouble(ntxtXi.Text), System.Convert.ToDouble(ntxtXd.Text));
+                                double? Resultado = Metodos.MetodosRaices.Secante(txtFunc.Text, System.Convert.ToDouble(ntxtXi.Text), System.Convert.ToDouble(ntxtXd.Text));
                                 if (Resultado == null)
                                 {
                                     MessageBox.Show("No se halló la raiz.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -218,11 +218,11 @@ namespace AnalisisNumerico.UI
                 object o = Eval.JScriptEvaluate(expression, engine);
                 return System.Convert.ToDouble(o).ToString();
             }
-            catch
+            catch (Exception)
             {
                 return "No se puede evaluar la expresión";
             }
-            engine.Close();
+            //engine.Close(); // Cualquier sentencia ubicada luego de un return no se ejecuta.
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)

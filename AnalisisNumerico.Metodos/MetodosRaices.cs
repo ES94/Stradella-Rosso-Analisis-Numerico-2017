@@ -52,17 +52,17 @@ namespace AnalisisNumerico.Metodos
             }
         }
 
-        public static double? Biseccion(double Xi, double Xd)
+        public static double? Biseccion(string funcion, double Xi, double Xd)
         {
             double? resultado = null;
 
-            if ((Funcion(Xi) * Funcion(Xd)) > 0)
+            if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, Xd)) > 0)
             {
                 resultado = null;
             }
-            else if ((Funcion(Xi) * Funcion(Xd)) == 0)
+            else if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, Xd)) == 0)
             {
-                if (Funcion(Xi) == 0)
+                if (ImagenDe(funcion, Xi) == 0)
                 {
                     resultado = Xi;
                 }
@@ -78,9 +78,9 @@ namespace AnalisisNumerico.Metodos
                 double XR = (Xi + Xd) / 2;
                 double ERROR = Math.Abs(XR - XANT) / XR;
 
-                while (!((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
+                while (!((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
                 {
-                    if ((Funcion(Xi) * Funcion(XR)) > 0)
+                    if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, XR)) > 0)
                     {
                         Xi = XR;
                     }
@@ -101,18 +101,18 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
-        
-        public static double? ReglaFalsa(double Xi, double Xd)
+
+        public static double? ReglaFalsa(string funcion, double Xi, double Xd)
         {
             double? resultado = null;
 
-            if ((Funcion(Xi) * Funcion(Xd)) > 0)
+            if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, Xd)) > 0)
             {
                 resultado = null;
             }
-            else if ((Funcion(Xi) * Funcion(Xd)) == 0)
+            else if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, Xd)) == 0)
             {
-                if (Funcion(Xi) == 0)
+                if (ImagenDe(funcion, Xi) == 0)
                 {
                     resultado = Xi;
                 }
@@ -125,12 +125,12 @@ namespace AnalisisNumerico.Metodos
             {
                 int C = 0;
                 double XANT = 0;
-                double XR = (Funcion(Xd) * Xi - Funcion(Xi) * Xd) / (Funcion(Xd) - Funcion(Xi));
+                double XR = (ImagenDe(funcion, Xd) * Xi - ImagenDe(funcion, Xi) * Xd) / (ImagenDe(funcion, Xd) - ImagenDe(funcion, Xi));
                 double ERROR = Math.Abs(XR - XANT) / XR;
 
-                while (!((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
+                while (!((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
                 {
-                    if ((Funcion(Xi) * Funcion(XR)) > 0)
+                    if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, XR)) > 0)
                     {
                         Xi = XR;
                     }
@@ -141,7 +141,7 @@ namespace AnalisisNumerico.Metodos
 
                     C++;
                     XANT = XR;
-                    XR = (Funcion(Xd) * Xi - Funcion(Xi) * Xd) / (Funcion(Xd) - Funcion(Xi));
+                    XR = (ImagenDe(funcion, Xd) * Xi - ImagenDe(funcion, Xi) * Xd) / (ImagenDe(funcion, Xd) - ImagenDe(funcion, Xi));
                     ERROR = Math.Abs(XR - XANT) / XR;
                 }
 
@@ -151,32 +151,32 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
-        private static double FalsaDerivada(double XINI)
+        private static double FalsaDerivada(string funcion, double XINI)
         {
             double Derivada;
             double Anterior;
             /// CASO 1
-            if ((Funcion(XINI + 0.0001) - Funcion(XINI)) / 0.0001 == 0)
+            if ((ImagenDe(funcion, XINI + 0.0001) - ImagenDe(funcion, XINI)) / 0.0001 == 0)
             {
                 Derivada = 0.0001;
             }
             else
             {
-                Derivada = (Funcion(XINI + 0.0001) - Funcion(XINI)) / 0.0001;
+                Derivada = (ImagenDe(funcion, XINI + 0.0001) - ImagenDe(funcion, XINI)) / 0.0001;
             }
             Anterior = XINI;
-            
+
 
             return Derivada;
         }
 
-        public static double? Newton(double XINI)
+        public static double? Newton(string funcion, double XINI)
         {
             double? resultado = null;
             double XANT = 0;
             double XR = 0;
             double ERROR = 0;
-            if (Math.Abs(Funcion(XINI)) < TOLE)
+            if (Math.Abs(ImagenDe(funcion, XINI)) < TOLE)
             {
                 resultado = XINI;
             }
@@ -185,10 +185,10 @@ namespace AnalisisNumerico.Metodos
                 XANT = 0;
                 for (int i = 0; i < ITER; i++)
                 {
-                  
-                    XR = XINI - (Funcion(XINI) / FalsaDerivada(XINI));
+
+                    XR = XINI - (ImagenDe(funcion, XINI) / FalsaDerivada(funcion, XINI));
                     ERROR = Math.Abs(XR - XANT) / XR;
-                    if ((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE))
+                    if ((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE))
                     {
                         break;
                     }
@@ -203,13 +203,13 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
-        public static double? Secante(double XINI, double XANT)
+        public static double? Secante(string funcion, double XINI, double XANT)
         {
             double? resultado = null;
             double XR = 0;
             double ERROR = 0;
 
-            if (Math.Abs(Funcion(XINI)) < TOLE)
+            if (Math.Abs(ImagenDe(funcion, XINI)) < TOLE)
             {
                 resultado = XINI;
             }
@@ -217,10 +217,10 @@ namespace AnalisisNumerico.Metodos
             {
                 for (int i = 0; i < ITER; i++)
                 {
-                    XR = ((Funcion(XANT) * XINI) - (Funcion(XINI) * XANT)) / (Funcion(XANT) - Funcion(XINI));
+                    XR = ((ImagenDe(funcion, XANT) * XINI) - (ImagenDe(funcion, XINI) * XANT)) / (ImagenDe(funcion, XANT) - ImagenDe(funcion, XINI));
                     ERROR = Math.Abs(XR - XANT) / XR;
 
-                    if ((Math.Abs(Funcion(XR)) < TOLE) || (ERROR < TOLE))
+                    if ((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE))
                     {
                         break;
                     }
@@ -237,21 +237,14 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
-        private static double Funcion(double x)
+        /// <summary>
+        /// Devuelve la imagen de una función pasada como parámetro, evaluada en la variable pasada como parámetro.
+        /// </summary>
+        /// <param name="f">Función a ser evaluada.</param>
+        /// <param name="x">Variable con la cuál la función será evaluada.</param>
+        private static double ImagenDe(string f, double x)
         {
-            return Math.Pow(x - 3, 2) - 1;
-            //return (0.5 * x - 4);
+            return new Function(f).calculate(x);
         }
-        //private static double FuncionAGraficar(string f, double x)
-        //{
-        //    Function funcion = new Function(f);
-        //    string argumento = "x = " + Convert.ToString(x).Replace(',', ':');
-        //    Argument argument = new Argument(argumento);
-        //    Expression r = new Expression("f(x)", funcion, argument);
-
-        //    var a = r.calculate();
-
-        //    return a;
-        //}
     }
 }
