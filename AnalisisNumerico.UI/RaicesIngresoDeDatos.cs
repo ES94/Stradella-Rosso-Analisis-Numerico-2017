@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AnalisisNumerico.Metodos;
 
 namespace AnalisisNumerico.UI
 {
@@ -70,7 +71,6 @@ namespace AnalisisNumerico.UI
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Metodos.MetodosRaices.ITER = System.Convert.ToInt32(ntxtIter.Text);
-            //Metodos.MetodosRaices.TOLE = System.Convert.ToDouble(txtTole.Text); // Error de conversión. VER.
 
             if (MetodoProveniente == "Biseccion")
             {
@@ -84,7 +84,7 @@ namespace AnalisisNumerico.UI
                     }
                     else
                     {
-                        MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("La raiz es: " + Resultado + " con " + Metodos.MetodosRaices.contadorIteraciones + " iteraciones.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
@@ -106,7 +106,7 @@ namespace AnalisisNumerico.UI
                         }
                         else
                         {
-                            MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("La raiz es: " + Resultado + " con " + Metodos.MetodosRaices.contadorIteraciones + " iteraciones.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     else
@@ -127,7 +127,7 @@ namespace AnalisisNumerico.UI
                             }
                             else
                             {
-                                MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("La raiz es: " + Resultado + " con " + Metodos.MetodosRaices.contadorIteraciones + " iteraciones.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         else
@@ -149,7 +149,7 @@ namespace AnalisisNumerico.UI
                                 }
                                 else
                                 {
-                                    MessageBox.Show("La raiz es: " + Resultado, "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("La raiz es: " + Resultado + " con " + Metodos.MetodosRaices.contadorIteraciones + " iteraciones.", "Metodos Raices", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                             else
@@ -164,6 +164,7 @@ namespace AnalisisNumerico.UI
 
         private void RaicesIngresoDeDatos_Load(object sender, EventArgs e)
         {
+            this.Text += MetodoProveniente;
         }
 
         private void ChartSeries()
@@ -222,7 +223,6 @@ namespace AnalisisNumerico.UI
             {
                 return "No se puede evaluar la expresión";
             }
-            //engine.Close(); // Cualquier sentencia ubicada luego de un return no se ejecuta.
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)

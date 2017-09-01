@@ -14,43 +14,8 @@ namespace AnalisisNumerico.Metodos
     public static class MetodosRaices
     {
         public static int ITER { get; set; }
-        public static double TOLE { get; set; } = 0.0001d;
-        private static double? resultadoRaices = null;
-        private static double? resultadoSistEq = null;
-        private static double? resultadoRegInter = null;
-        private static double? resultadoInteg = null;
-
-        public static double? ResultadoRaices
-        {
-            get
-            {
-                return resultadoRaices;
-            }
-        }
-
-        public static double? ResultadoSistEq
-        {
-            get
-            {
-                return resultadoSistEq;
-            }
-        }
-
-        public static double? ResultadoRegInter
-        {
-            get
-            {
-                return resultadoRegInter;
-            }
-        }
-
-        public static double? ResultadoInteg
-        {
-            get
-            {
-                return resultadoInteg;
-            }
-        }
+        public static double TOLE = 0.0001d;
+        public static int contadorIteraciones = 0;
 
         public static double? Biseccion(string funcion, double Xi, double Xd)
         {
@@ -78,7 +43,7 @@ namespace AnalisisNumerico.Metodos
                 double XR = (Xi + Xd) / 2;
                 double ERROR = Math.Abs(XR - XANT) / XR;
 
-                while (!((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
+                while (!((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (Math.Abs(ERROR) < TOLE) || (C >= ITER)))
                 {
                     if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, XR)) > 0)
                     {
@@ -94,7 +59,8 @@ namespace AnalisisNumerico.Metodos
                     XR = (Xi + Xd) / 2;
                     ERROR = Math.Abs(XR - XANT) / XR;
                 }
-                
+
+                contadorIteraciones = C;
                 resultado = XR;
             }
 
@@ -128,7 +94,7 @@ namespace AnalisisNumerico.Metodos
                 double XR = (ImagenDe(funcion, Xd) * Xi - ImagenDe(funcion, Xi) * Xd) / (ImagenDe(funcion, Xd) - ImagenDe(funcion, Xi));
                 double ERROR = Math.Abs(XR - XANT) / XR;
 
-                while (!((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE) || (C >= ITER)))
+                while (!((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (Math.Abs(ERROR) < TOLE) || (C >= ITER)))
                 {
                     if ((ImagenDe(funcion, Xi) * ImagenDe(funcion, XR)) > 0)
                     {
@@ -145,6 +111,7 @@ namespace AnalisisNumerico.Metodos
                     ERROR = Math.Abs(XR - XANT) / XR;
                 }
 
+                contadorIteraciones = C;
                 resultado = XR;
             }
 
@@ -188,7 +155,7 @@ namespace AnalisisNumerico.Metodos
 
                     XR = XINI - (ImagenDe(funcion, XINI) / FalsaDerivada(funcion, XINI));
                     ERROR = Math.Abs(XR - XANT) / XR;
-                    if ((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE))
+                    if ((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (Math.Abs(ERROR) < TOLE))
                     {
                         break;
                     }
@@ -197,6 +164,8 @@ namespace AnalisisNumerico.Metodos
                         XINI = XR;
                         XANT = XR;
                     }
+
+                    contadorIteraciones = i;
                 }
                 resultado = XR;
             }
@@ -220,7 +189,7 @@ namespace AnalisisNumerico.Metodos
                     XR = ((ImagenDe(funcion, XANT) * XINI) - (ImagenDe(funcion, XINI) * XANT)) / (ImagenDe(funcion, XANT) - ImagenDe(funcion, XINI));
                     ERROR = Math.Abs(XR - XANT) / XR;
 
-                    if ((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (ERROR < TOLE))
+                    if ((Math.Abs(ImagenDe(funcion, XR)) < TOLE) || (Math.Abs(ERROR) < TOLE))
                     {
                         break;
                     }
@@ -229,6 +198,8 @@ namespace AnalisisNumerico.Metodos
                         XINI = XANT;
                         XANT = XR;
                     }
+
+                    contadorIteraciones = i;
                 }
 
                 resultado = XR;
@@ -245,6 +216,11 @@ namespace AnalisisNumerico.Metodos
         private static double ImagenDe(string f, double x)
         {
             return new Function(f).calculate(x);
+        }
+
+        public static double Funcion(double x)
+        {
+            return 4 - (1/(x*x)) - 2 * Math.Log(x);
         }
     }
 }

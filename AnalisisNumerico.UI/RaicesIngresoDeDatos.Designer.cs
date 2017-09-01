@@ -37,10 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFunc = new System.Windows.Forms.TextBox();
             this.btnGraficar = new System.Windows.Forms.Button();
-            this.lblTole = new System.Windows.Forms.Label();
             this.lblIter = new System.Windows.Forms.Label();
             this.ntxtIter = new Aga.Controls.NumericTextBox();
-            this.txtTole = new System.Windows.Forms.TextBox();
             this.ntxtXd = new System.Windows.Forms.TextBox();
             this.ntxtXi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Graficador)).BeginInit();
@@ -70,7 +68,7 @@
             // 
             this.lblxd.AutoSize = true;
             this.lblxd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxd.Location = new System.Drawing.Point(152, 11);
+            this.lblxd.Location = new System.Drawing.Point(133, 11);
             this.lblxd.Name = "lblxd";
             this.lblxd.Size = new System.Drawing.Size(28, 16);
             this.lblxd.TabIndex = 4;
@@ -92,18 +90,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(530, 33);
+            this.label1.Location = new System.Drawing.Point(389, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "F (X) =";
+            this.label1.Text = "Función";
             // 
             // txtFunc
             // 
-            this.txtFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFunc.Location = new System.Drawing.Point(574, 30);
+            this.txtFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFunc.Location = new System.Drawing.Point(392, 30);
             this.txtFunc.Name = "txtFunc";
-            this.txtFunc.Size = new System.Drawing.Size(117, 24);
+            this.txtFunc.Size = new System.Drawing.Size(227, 20);
             this.txtFunc.TabIndex = 8;
             // 
             // btnGraficar
@@ -116,21 +114,11 @@
             this.btnGraficar.UseVisualStyleBackColor = true;
             this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
             // 
-            // lblTole
-            // 
-            this.lblTole.AutoSize = true;
-            this.lblTole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTole.Location = new System.Drawing.Point(284, 11);
-            this.lblTole.Name = "lblTole";
-            this.lblTole.Size = new System.Drawing.Size(83, 16);
-            this.lblTole.TabIndex = 11;
-            this.lblTole.Text = "Tolerancia";
-            // 
             // lblIter
             // 
             this.lblIter.AutoSize = true;
             this.lblIter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIter.Location = new System.Drawing.Point(390, 11);
+            this.lblIter.Location = new System.Drawing.Point(236, 11);
             this.lblIter.Name = "lblIter";
             this.lblIter.Size = new System.Drawing.Size(150, 16);
             this.lblIter.TabIndex = 13;
@@ -140,21 +128,14 @@
             // 
             this.ntxtIter.AllowDecimalSeparator = false;
             this.ntxtIter.AllowNegativeSign = false;
-            this.ntxtIter.Location = new System.Drawing.Point(408, 30);
+            this.ntxtIter.Location = new System.Drawing.Point(239, 30);
             this.ntxtIter.Name = "ntxtIter";
-            this.ntxtIter.Size = new System.Drawing.Size(100, 20);
+            this.ntxtIter.Size = new System.Drawing.Size(147, 20);
             this.ntxtIter.TabIndex = 12;
-            // 
-            // txtTole
-            // 
-            this.txtTole.Location = new System.Drawing.Point(269, 30);
-            this.txtTole.Name = "txtTole";
-            this.txtTole.Size = new System.Drawing.Size(109, 20);
-            this.txtTole.TabIndex = 14;
             // 
             // ntxtXd
             // 
-            this.ntxtXd.Location = new System.Drawing.Point(155, 30);
+            this.ntxtXd.Location = new System.Drawing.Point(133, 30);
             this.ntxtXd.Name = "ntxtXd";
             this.ntxtXd.Size = new System.Drawing.Size(100, 20);
             this.ntxtXd.TabIndex = 15;
@@ -174,10 +155,8 @@
             this.ClientSize = new System.Drawing.Size(809, 480);
             this.Controls.Add(this.ntxtXi);
             this.Controls.Add(this.ntxtXd);
-            this.Controls.Add(this.txtTole);
             this.Controls.Add(this.lblIter);
             this.Controls.Add(this.ntxtIter);
-            this.Controls.Add(this.lblTole);
             this.Controls.Add(this.btnGraficar);
             this.Controls.Add(this.txtFunc);
             this.Controls.Add(this.label1);
@@ -204,10 +183,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFunc;
         private System.Windows.Forms.Button btnGraficar;
-        private System.Windows.Forms.Label lblTole;
         private System.Windows.Forms.Label lblIter;
         private Aga.Controls.NumericTextBox ntxtIter;
-        private System.Windows.Forms.TextBox txtTole;
         private System.Windows.Forms.TextBox ntxtXd;
         private System.Windows.Forms.TextBox ntxtXi;
     }
