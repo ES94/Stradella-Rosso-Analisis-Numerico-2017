@@ -70,7 +70,7 @@ namespace AnalisisNumerico.UI
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Metodos.MetodosRaices.ITER = System.Convert.ToInt32(ntxtIter.Text);
-            Metodos.MetodosRaices.TOLE = System.Convert.ToDouble(txtTole.Text);           
+            //Metodos.MetodosRaices.TOLE = System.Convert.ToDouble(txtTole.Text); // Error de conversión. VER.
 
             if (MetodoProveniente == "Biseccion")
             {

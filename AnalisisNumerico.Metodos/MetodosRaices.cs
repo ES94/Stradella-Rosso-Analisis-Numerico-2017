@@ -14,7 +14,7 @@ namespace AnalisisNumerico.Metodos
     public static class MetodosRaices
     {
         public static int ITER { get; set; }
-        public static double TOLE { get; set; }
+        public static double TOLE { get; set; } = 0.0001d;
         private static double? resultadoRaices = null;
         private static double? resultadoSistEq = null;
         private static double? resultadoRegInter = null;
@@ -94,7 +94,7 @@ namespace AnalisisNumerico.Metodos
                     XR = (Xi + Xd) / 2;
                     ERROR = Math.Abs(XR - XANT) / XR;
                 }
-
+                
                 resultado = XR;
             }
 
