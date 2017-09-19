@@ -15,3 +15,9 @@ C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Anali
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.csprojResolveAssemblyReference.cache
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\bin\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\bin\Debug\AnalisisNumerico.Metodos.pdb
+C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.csprojResolveAssemblyReference.cache
+C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.dll
+C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.Metodos\obj\Debug\AnalisisNumerico.Metodos.pdb

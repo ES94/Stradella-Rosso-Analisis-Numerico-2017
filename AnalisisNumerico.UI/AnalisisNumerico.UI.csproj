@@ -60,6 +60,12 @@
     <Compile Include="MetodosRaices.Designer.cs">
       <DependentUpon>MetodosRaices.cs</DependentUpon>
     </Compile>
+    <Compile Include="MetodosSistemasEcuaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetodosSistemasEcuaciones.Designer.cs">
+      <DependentUpon>MetodosSistemasEcuaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,8 +80,17 @@
     <Compile Include="RaicesIngresoDeDatos.Designer.cs">
       <DependentUpon>RaicesIngresoDeDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="SistemasIngresoDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SistemasIngresoDeDatos.Designer.cs">
+      <DependentUpon>SistemasIngresoDeDatos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MetodosRaices.resx">
       <DependentUpon>MetodosRaices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetodosSistemasEcuaciones.resx">
+      <DependentUpon>MetodosSistemasEcuaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
@@ -91,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="RaicesIngresoDeDatos.resx">
       <DependentUpon>RaicesIngresoDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SistemasIngresoDeDatos.resx">
+      <DependentUpon>SistemasIngresoDeDatos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

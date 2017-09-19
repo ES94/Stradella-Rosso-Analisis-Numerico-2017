@@ -29,5 +29,11 @@ namespace AnalisisNumerico.UI
             MetodosRaices FormRaiz = new MetodosRaices();
             FormRaiz.Show();
         }
+
+        private void btnSistemasEcuaciones_Click(object sender, EventArgs e)
+        {
+            MetodosSistemasEcuaciones FormSis = new MetodosSistemasEcuaciones();
+            FormSis.Show();
+        }
     }
 }
