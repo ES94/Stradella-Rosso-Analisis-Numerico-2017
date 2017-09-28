@@ -32,16 +32,18 @@
             this.lblCantidadVar = new System.Windows.Forms.Label();
             this.txtCantidadVariables = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaEcuaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // GrillaEcuaciones
             // 
             this.GrillaEcuaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaEcuaciones.Location = new System.Drawing.Point(12, 90);
+            this.GrillaEcuaciones.Location = new System.Drawing.Point(9, 73);
+            this.GrillaEcuaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GrillaEcuaciones.Name = "GrillaEcuaciones";
             this.GrillaEcuaciones.RowTemplate.Height = 24;
-            this.GrillaEcuaciones.Size = new System.Drawing.Size(807, 415);
+            this.GrillaEcuaciones.Size = new System.Drawing.Size(605, 337);
             this.GrillaEcuaciones.TabIndex = 0;
             this.GrillaEcuaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -49,38 +51,53 @@
             // 
             this.lblCantidadVar.AutoSize = true;
             this.lblCantidadVar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadVar.Location = new System.Drawing.Point(25, 25);
+            this.lblCantidadVar.Location = new System.Drawing.Point(19, 20);
+            this.lblCantidadVar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidadVar.Name = "lblCantidadVar";
-            this.lblCantidadVar.Size = new System.Drawing.Size(271, 29);
+            this.lblCantidadVar.Size = new System.Drawing.Size(215, 24);
             this.lblCantidadVar.TabIndex = 1;
             this.lblCantidadVar.Text = "Cantidad de Variables";
             // 
             // txtCantidadVariables
             // 
-            this.txtCantidadVariables.Location = new System.Drawing.Point(318, 32);
+            this.txtCantidadVariables.Location = new System.Drawing.Point(238, 26);
+            this.txtCantidadVariables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCantidadVariables.Name = "txtCantidadVariables";
-            this.txtCantidadVariables.Size = new System.Drawing.Size(79, 22);
+            this.txtCantidadVariables.Size = new System.Drawing.Size(60, 20);
             this.txtCantidadVariables.TabIndex = 2;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(459, 25);
+            this.btnAceptar.Location = new System.Drawing.Point(344, 20);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(125, 32);
+            this.btnAceptar.Size = new System.Drawing.Size(94, 26);
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(471, 22);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 4;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
             // SistemasIngresoDeDatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 517);
+            this.ClientSize = new System.Drawing.Size(623, 420);
+            this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtCantidadVariables);
             this.Controls.Add(this.lblCantidadVar);
             this.Controls.Add(this.GrillaEcuaciones);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SistemasIngresoDeDatos";
             this.Text = "SistemasIngresoDeDatos";
             this.Load += new System.EventHandler(this.SistemasIngresoDeDatos_Load);
@@ -96,5 +113,6 @@
         private System.Windows.Forms.Label lblCantidadVar;
         private System.Windows.Forms.TextBox txtCantidadVariables;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCalcular;
     }
 }
