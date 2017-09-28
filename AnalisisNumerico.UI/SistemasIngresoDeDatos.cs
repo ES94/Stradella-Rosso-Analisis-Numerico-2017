@@ -30,18 +30,27 @@ namespace AnalisisNumerico.UI
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //for (int i = 0; i < Convert.ToInt32(btnAceptar.Text); i++)
-            //{
-            //    GrillaEcuaciones.ColumnAdded();
-            //}
-            //GrillaEcuaciones.ColumnCount = Convert.ToInt32(btnAceptar.Text);
-            //GrillaEcuaciones.RowCount = Convert.ToInt32(btnAceptar.Text);
-
-            for (int i = 0; i < Convert.ToInt32(txtCantidadVariables.Text); i++)
+            if (txtCantidadVariables.Text != String.Empty)
             {
-                DataGridViewTextBoxColumn Columna = new DataGridViewTextBoxColumn();
-                Columna.HeaderText = "A" +  (i + 1).ToString();
-                GrillaEcuaciones.Columns.Add(Columna);
+                for (int i = 0; i < Convert.ToInt32(txtCantidadVariables.Text) + 1; i++)
+                {
+                    DataGridViewTextBoxColumn Columna = new DataGridViewTextBoxColumn();
+                    if (i == (Convert.ToInt32(txtCantidadVariables.Text)))
+                    {
+                        Columna.HeaderText = "Resultado";
+                    }
+                    else
+                    {
+                        Columna.HeaderText = (i + 1).ToString();
+                    }
+                    GrillaEcuaciones.Columns.Add(Columna);
+                }
+
+                for (int i = 0; i < Convert.ToInt32(txtCantidadVariables.Text) - 1; i++)
+                {
+                    DataGridViewRow fila = new DataGridViewRow();
+                    GrillaEcuaciones.Rows.Add(fila);
+                }
             }
         }
 
@@ -94,6 +103,12 @@ namespace AnalisisNumerico.UI
 
                 MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnLimpiarGrilla_Click(object sender, EventArgs e)
+        {
+            GrillaEcuaciones.Rows.Clear();
+            GrillaEcuaciones.Columns.Clear();
         }
     }
 }

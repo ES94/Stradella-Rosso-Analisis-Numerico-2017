@@ -59,3 +59,6 @@ C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-
 C:\Users\cali2\Desktop\nico facu\3ro\Analisis\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.SistemasIngresoDeDatos.resources
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.MetodosSistemasEcuaciones.resources
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.SistemasIngresoDeDatos.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\bin\Debug\MathParser.org-mXparser.Net452.dll
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.MetodosSistemasEcuaciones.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.SistemasIngresoDeDatos.resources
