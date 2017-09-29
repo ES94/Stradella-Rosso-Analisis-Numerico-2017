@@ -89,7 +89,7 @@ namespace AnalisisNumerico.UI
                 string mensaje = "";
                 int indice = 0;
 
-                foreach (decimal resultado in vectorSolucion)
+                foreach (double resultado in vectorSolucion)
                 {
                     indice++;
                     mensaje += string.Format("\nX{0} = {1}", indice, resultado);

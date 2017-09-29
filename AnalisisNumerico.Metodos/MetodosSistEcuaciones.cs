@@ -15,58 +15,61 @@ namespace AnalisisNumerico.Metodos
     {
         /// <summary>
         /// Obtiene un vector de los resultados de un sistema de ecuaciones a partir de la construcción y reducción de una matriz
-        /// obtenida de los coeficientes del sistema.
+        /// de coeficientes y un vector de términos independientes, obtenidos a partir de los coeficientes de un sistema de
+        /// ecuaciones.
         /// </summary>
-        /// <param name="n">Orden de la matriz cuadrada de coeficientes.</param>
-        /// <param name="vectorCoeficientes">Vector de todos los coeficientes ordenados, empezando desde los coeficientes de la primera
-        /// ecuación hasta los coeficientes de la última ecuación.</param>
+        /// <param name="matrizCoeficientes">Matriz cuadrada de coeficientes.</param>
+        /// <param name="vectorIndependientes">Vector de términos independientes.</param>
         public static decimal[] GaussJordan(decimal[,] matrizCoeficientes, decimal[] vectorIndependientes)
         {
             int n = vectorIndependientes.Length;
 
             for (int columna = 0; columna < n; columna++)
             {
-                /*
-                 * Se normliza la fila para trabajar con la columna.
-                 */
+                #region Normalización de la fila.
+                decimal factor = matrizCoeficientes[columna, columna];
+
                 for (int i = 0; i < n; i++)
                 {
-                    matrizCoeficientes[i, columna] /= matrizCoeficientes[columna, columna];
+                    matrizCoeficientes[i, columna] /= factor;
                 }
 
-                vectorIndependientes[columna] /= matrizCoeficientes[columna, columna];
+                vectorIndependientes[columna] /= factor;
+                #endregion
 
                 for (int fila = 0; fila < n; fila++)
                 {
                     if (fila != columna)
                     {
-                        /*
-                         * Se multiplica la fila normalizada por el coeficiente que se debe convertir a cero.
-                         */
-                        decimal[] filaPorCoef = new decimal[n];
+                        #region Multiplicación de la fila normalizada por el coeficiente.
+                        decimal[] filaPorCoef = new decimal[n + 1];
 
-                        for (int i = 0; i < n - 1; i++)
+                        for (int i = 0; i < n; i++)
                         {
                             filaPorCoef[i] = matrizCoeficientes[i, columna] * matrizCoeficientes[columna, fila];
                         }
 
-                        filaPorCoef[n - 1] = vectorIndependientes[columna] * matrizCoeficientes[columna, fila];
+                        filaPorCoef[n] = vectorIndependientes[columna] * matrizCoeficientes[columna, fila];
+                        #endregion
 
-                        /*
-                         * A la fila a la cuál pertenece el coeficiente que se debe convertir a cero se le resta el valor
-                         * auxiliar obtenido de la fila multiplicada por el mismo coeficiente.
-                         */
-                        for (int i = 0; i < n - 1; i++)
+                        #region Resta entre la fila actual y el producto obtenido anteriormente.
+                        for (int i = 0; i < n; i++)
                         {
                             matrizCoeficientes[i, fila] -= filaPorCoef[i];
                         }
 
-                        vectorIndependientes[fila] -= filaPorCoef[n - 1];
+                        vectorIndependientes[fila] -= filaPorCoef[n];
+                        #endregion
                     }
                 }
             }
 
             return vectorIndependientes;
+        }
+
+        public static decimal[] GaussSeidel()
+        {
+            return new decimal[0];
         }
     }
 }
