@@ -58,11 +58,11 @@ namespace AnalisisNumerico.UI
         {
             bool tieneCampoFaltante = false;
 
-            foreach (DataGridViewRow fila in GrillaEcuaciones.Rows)
+            for (int i = 0; i < GrillaEcuaciones.RowCount - 1; i++)
             {
-                foreach (DataGridViewCell celda in fila.Cells)
+                foreach (DataGridViewCell celda in GrillaEcuaciones.Rows[i].Cells)
                 {
-                    if (celda.Value ==null && celda.Value.ToString() == "")
+                    if (celda.Value == null || celda.Value.ToString() == "")
                     {
                         tieneCampoFaltante = true;
                     }
@@ -71,28 +71,28 @@ namespace AnalisisNumerico.UI
 
             if (GrillaEcuaciones.RowCount != 0 && !tieneCampoFaltante)
             {
-                List<List<double>> matrizCoeficientes = new List<List<double>>();
+                int n = GrillaEcuaciones.ColumnCount - 1;
+                decimal[,] matrizCoeficientes = new decimal[n, n];
+                decimal[] vectorIndependientes = new decimal[n];
 
-                foreach (DataGridViewRow fila in GrillaEcuaciones.Rows)
+                for (int i = 0; i < n; i++)
                 {
-                    List<double> filaCoeficientes = new List<double>();
-
-                    foreach (DataGridViewCell celda in fila.Cells)
+                    for (int j = 0; j < n; j++)
                     {
-                        filaCoeficientes.Add(Convert.ToDouble(celda.Value));
+                        matrizCoeficientes[j, i] = Convert.ToDecimal(GrillaEcuaciones[j, i].Value);
                     }
 
-                    matrizCoeficientes.Add(filaCoeficientes);
+                    vectorIndependientes[i] = Convert.ToDecimal(GrillaEcuaciones[n, i].Value);
                 }
 
-                List<double> vectorResultado = MetodosSistEcuaciones.GaussJordan(matrizCoeficientes);
+                decimal[] vectorSolucion = MetodosSistEcuaciones.GaussJordan(matrizCoeficientes, vectorIndependientes);
                 string mensaje = "";
                 int indice = 0;
 
-                foreach (double resultado in vectorResultado)
+                foreach (decimal resultado in vectorSolucion)
                 {
                     indice++;
-                    mensaje = string.Format("\nX{0} = {1}", indice, resultado);
+                    mensaje += string.Format("\nX{0} = {1}", indice, resultado);
                 }
 
                 MessageBox.Show("Resultado:" + mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);

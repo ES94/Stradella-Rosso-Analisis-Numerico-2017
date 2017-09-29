@@ -20,64 +20,53 @@ namespace AnalisisNumerico.Metodos
         /// <param name="n">Orden de la matriz cuadrada de coeficientes.</param>
         /// <param name="vectorCoeficientes">Vector de todos los coeficientes ordenados, empezando desde los coeficientes de la primera
         /// ecuación hasta los coeficientes de la última ecuación.</param>
-        public static List<double> GaussJordan(List<List<double>> matrizCoeficientes)
+        public static decimal[] GaussJordan(decimal[,] matrizCoeficientes, decimal[] vectorIndependientes)
         {
-            List<double> vectorResultado = new List<double>(matrizCoeficientes.Count);
+            int n = vectorIndependientes.Length;
 
-            for (int columna = 0; columna < matrizCoeficientes.Count; columna++)
+            for (int columna = 0; columna < n; columna++)
             {
-                List<double> eqNormalizada = matrizCoeficientes[columna];
-
                 /*
-                 * Normalizar ecuación a utilizar en la columna actual.
+                 * Se normliza la fila para trabajar con la columna.
                  */
-                for (int i = 0; i < eqNormalizada.Count; i++)
+                for (int i = 0; i < n; i++)
                 {
-                    eqNormalizada[i] /= eqNormalizada.Max();
+                    matrizCoeficientes[i, columna] /= matrizCoeficientes[columna, columna];
                 }
 
-                for (int fila = 0; fila < matrizCoeficientes.Count; fila++)
+                vectorIndependientes[columna] /= matrizCoeficientes[columna, columna];
+
+                for (int fila = 0; fila < n; fila++)
                 {
-                    if (columna != fila)
+                    if (fila != columna)
                     {
-                        double coeficiente = matrizCoeficientes[fila][columna];
-                        List<double> ecuacionActual = matrizCoeficientes[fila];
-                        List<double> eqNormalizadaPorCoef = eqNormalizada;
-
                         /*
-                         * Se multiplica la ecuación normalizada por el coeficiente actual.
+                         * Se multiplica la fila normalizada por el coeficiente que se debe convertir a cero.
                          */
-                        for (int i = 0; i < eqNormalizada.Count; i++)
+                        decimal[] filaPorCoef = new decimal[n];
+
+                        for (int i = 0; i < n - 1; i++)
                         {
-                            eqNormalizadaPorCoef[i] = eqNormalizada[i] * coeficiente;
+                            filaPorCoef[i] = matrizCoeficientes[i, columna] * matrizCoeficientes[columna, fila];
                         }
 
+                        filaPorCoef[n - 1] = vectorIndependientes[columna] * matrizCoeficientes[columna, fila];
+
                         /*
-                         * A la ecuación en la fila actual se le resta el producto la ecuación normalizada por el coeficiente.
+                         * A la fila a la cuál pertenece el coeficiente que se debe convertir a cero se le resta el valor
+                         * auxiliar obtenido de la fila multiplicada por el mismo coeficiente.
                          */
-                        for (int i = 0; i < ecuacionActual.Count; i++)
+                        for (int i = 0; i < n - 1; i++)
                         {
-                            ecuacionActual[i] -= eqNormalizadaPorCoef[i];
+                            matrizCoeficientes[i, fila] -= filaPorCoef[i];
                         }
+
+                        vectorIndependientes[fila] -= filaPorCoef[n - 1];
                     }
                 }
             }
 
-            /*
-             * Se rellena al vector con los valores de resultado. Las posiciones de los coeficientes indican a qué variable pertenecen.
-             */
-            for (int fila = 0; fila < matrizCoeficientes.Count; fila++)
-            {
-                for (int columna = 0; columna < matrizCoeficientes.Count; columna++)
-                {
-                    if (fila == columna)
-                    {
-                        vectorResultado.Add(matrizCoeficientes[fila][columna]);
-                    }
-                }
-            }
-
-            return vectorResultado;
+            return vectorIndependientes;
         }
     }
 }
