@@ -13,7 +13,7 @@ namespace AnalisisNumerico.Metodos
 {
     public static class MetodosSistEcuaciones
     {
-        private static int ITER = 10000;
+        private static int ITER = 100;
         private static decimal TOLE = .001M;
 
         /// <summary>
@@ -70,6 +70,12 @@ namespace AnalisisNumerico.Metodos
             return vectorIndependientes;
         }
 
+        /// <summary>
+        /// Obtiene un vector de los resultados de un sistema de ecuaciones a partir del despeje de las variables del sistema y 
+        /// aproximando el resultado mediante el cálculo recursivo de las mismas.
+        /// </summary>
+        /// <param name="matrizCoeficientes">Matriz cuadrada de coeficientes.</param>
+        /// <param name="vectorIndependientes">Vector de términos independientes.</param>
         public static decimal[] GaussSeidel(decimal[,] matrizCoeficientes, decimal[] vectorIndependientes)
         {
             int iter = 0;
@@ -79,7 +85,7 @@ namespace AnalisisNumerico.Metodos
 
             for (int i = 0; i < n; i++)
             {
-                vectorInd[i] = vectorIndependientes[i];
+                vectorInd[i] = 0;
             }
 
             while (iter < ITER)
@@ -94,11 +100,14 @@ namespace AnalisisNumerico.Metodos
                 #region Obtención de la nueva solución.
                 for (int fila = 0; fila < n; fila++)
                 {
-                    vectorInd[fila] /= matrizCoeficientes[fila, fila];
+                    vectorInd[fila] = vectorIndependientes[fila] / matrizCoeficientes[fila, fila];
 
                     for (int columna = 0; columna < n; columna++)
                     {
-                        vectorInd[fila] -= matrizCoeficientes[columna, fila] / matrizCoeficientes[fila, fila];
+                        if (columna != fila)
+                        {
+                            vectorInd[fila] -= (matrizCoeficientes[columna, fila] * vectorInd[columna]) / matrizCoeficientes[fila, fila];
+                        }
                     }
                 }
                 #endregion
