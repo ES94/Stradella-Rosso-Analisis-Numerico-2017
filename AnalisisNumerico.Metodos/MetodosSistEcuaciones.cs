@@ -13,6 +13,9 @@ namespace AnalisisNumerico.Metodos
 {
     public static class MetodosSistEcuaciones
     {
+        private static int ITER = 10000;
+        private static decimal TOLE = .001M;
+
         /// <summary>
         /// Obtiene un vector de los resultados de un sistema de ecuaciones a partir de la construcción y reducción de una matriz
         /// de coeficientes y un vector de términos independientes, obtenidos a partir de los coeficientes de un sistema de
@@ -67,9 +70,63 @@ namespace AnalisisNumerico.Metodos
             return vectorIndependientes;
         }
 
-        public static decimal[] GaussSeidel()
+        public static decimal[] GaussSeidel(decimal[,] matrizCoeficientes, decimal[] vectorIndependientes)
         {
-            return new decimal[0];
+            int iter = 0;
+            int n = vectorIndependientes.Length;
+            decimal[] vectorSolucionAnterior = new decimal[n];
+            decimal[] vectorInd = new decimal[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                vectorInd[i] = vectorIndependientes[i];
+            }
+
+            while (iter < ITER)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    vectorSolucionAnterior[i] = vectorInd[i];
+                }
+
+                bool sonIguales = true;
+
+                #region Obtención de la nueva solución.
+                for (int fila = 0; fila < n; fila++)
+                {
+                    vectorInd[fila] /= matrizCoeficientes[fila, fila];
+
+                    for (int columna = 0; columna < n; columna++)
+                    {
+                        vectorInd[fila] -= matrizCoeficientes[columna, fila] / matrizCoeficientes[fila, fila];
+                    }
+                }
+                #endregion
+
+                #region Comparación entre la solución actual y la anterior.
+                for (int i = 0; i < n; i++)
+                {
+                    if (Math.Abs(vectorInd[i] - vectorSolucionAnterior[i]) > TOLE)
+                    {
+                        sonIguales = false;
+                    }
+                }
+
+                if (sonIguales)
+                {
+                    break;
+                }
+                #endregion
+
+                iter++;
+            }
+
+            if (iter >= ITER)
+            {
+                throw new Exception("Se ha superado el límite de iteraciones.");
+            }
+
+            return vectorInd;
         }
     }
 }

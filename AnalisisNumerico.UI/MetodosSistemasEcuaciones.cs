@@ -19,13 +19,13 @@ namespace AnalisisNumerico.UI
 
         private void btnGaussJordan_Click(object sender, EventArgs e)
         {
-            SistemasIngresoDeDatos IngresoDatos = new SistemasIngresoDeDatos();
+            SistemasIngresoDeDatos IngresoDatos = new SistemasIngresoDeDatos((sender as Button).Text, 1);
             IngresoDatos.Show();
         }
 
         private void btnGaussSeide_Click(object sender, EventArgs e)
         {
-            SistemasIngresoDeDatos IngresoDatos = new SistemasIngresoDeDatos();
+            SistemasIngresoDeDatos IngresoDatos = new SistemasIngresoDeDatos((sender as Button).Text, 2);
             IngresoDatos.Show();
         }
     }

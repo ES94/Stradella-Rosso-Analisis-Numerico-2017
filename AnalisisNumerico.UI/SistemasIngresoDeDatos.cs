@@ -13,10 +13,14 @@ namespace AnalisisNumerico.UI
 {
     public partial class SistemasIngresoDeDatos : Form
     {
-        public SistemasIngresoDeDatos()
+        public SistemasIngresoDeDatos(string titulo, int opcion)
         {
             InitializeComponent();
+            this.opcion = opcion;
+            Text = "Ingreso de datos: " + titulo;
         }
+
+        private int opcion;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -85,7 +89,9 @@ namespace AnalisisNumerico.UI
                     vectorIndependientes[i] = Convert.ToDecimal(GrillaEcuaciones[n, i].Value);
                 }
 
-                decimal[] vectorSolucion = MetodosSistEcuaciones.GaussJordan(matrizCoeficientes, vectorIndependientes);
+                decimal[] vectorSolucion = opcion == 1 ? 
+                    MetodosSistEcuaciones.GaussJordan(matrizCoeficientes, vectorIndependientes) :
+                    MetodosSistEcuaciones.GaussSeidel(matrizCoeficientes, vectorIndependientes);
                 string mensaje = "";
                 int indice = 0;
 
