@@ -116,5 +116,45 @@ namespace AnalisisNumerico.UI
             GrillaEcuaciones.Rows.Clear();
             GrillaEcuaciones.Columns.Clear();
         }
+
+        private void btnCalcDet_Click(object sender, EventArgs e)
+        {
+            bool tieneCampoFaltante = false;
+
+            for (int i = 0; i < GrillaEcuaciones.RowCount - 1; i++)
+            {
+                foreach (DataGridViewCell celda in GrillaEcuaciones.Rows[i].Cells)
+                {
+                    if (celda.Value == null || celda.Value.ToString() == "")
+                    {
+                        tieneCampoFaltante = true;
+                    }
+                }
+            }
+
+            if (GrillaEcuaciones.RowCount != 0 && !tieneCampoFaltante)
+            {
+                int n = GrillaEcuaciones.ColumnCount - 1;
+                double[,] matrizCoeficientes = new double[n, n];
+                
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        matrizCoeficientes[j, i] = Convert.ToDouble(GrillaEcuaciones[j, i].Value);
+                    }
+                }
+
+                double resultado = MetodosSistEcuaciones.CalcularDeterminante(matrizCoeficientes);
+
+                MessageBox.Show("Resultado:\nEl determinante es " + resultado + ".", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string mensaje = GrillaEcuaciones.RowCount != 0 ? "Rellene los campos faltantes." : "Cree una grilla para el ingreso de datos.";
+
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

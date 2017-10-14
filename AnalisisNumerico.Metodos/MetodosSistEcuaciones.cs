@@ -137,5 +137,47 @@ namespace AnalisisNumerico.Metodos
 
             return vectorInd;
         }
+
+        /// <summary>
+        /// Obtiene el determinante a partir de una matriz de coeficientes de un sistema de ecuaciones.
+        /// </summary>
+        /// <param name="matrizCoeficientes">Matriz de coeficientes del sistema.</param>
+        public static double CalcularDeterminante(double[,] matrizCoeficientes)
+        {
+            double resultado = 0;
+            int n = matrizCoeficientes.GetLength(0);
+
+            if (n == 1)
+            {
+                resultado = matrizCoeficientes[0, 0];
+            }
+            else
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    #region Creación de matriz del menor complementario.
+                    int columna = 0;
+                    double[,] matrizMenorComplementario = new double[n - 1, n - 1];
+
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (j != i)
+                        {
+                            for (int k = 1; k < n; k++)
+                            {
+                                matrizMenorComplementario[columna, k - 1] = matrizCoeficientes[j, k];
+                            }
+
+                            columna++;
+                        }
+                    }
+                    #endregion
+
+                    resultado += Math.Pow(-1, i + 2) * matrizCoeficientes[i, 0] * CalcularDeterminante(matrizMenorComplementario);
+                }
+            }
+
+            return resultado;
+        }
     }
 }
