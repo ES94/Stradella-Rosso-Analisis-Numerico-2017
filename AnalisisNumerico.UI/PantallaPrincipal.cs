@@ -35,5 +35,11 @@ namespace AnalisisNumerico.UI
             MetodosSistemasEcuaciones FormSis = new MetodosSistemasEcuaciones();
             FormSis.Show();
         }
+
+        private void btnRegresion_Click(object sender, EventArgs e)
+        {
+            MetodosRegresionInterpolacion FormRegInter = new MetodosRegresionInterpolacion();
+            FormRegInter.Show();
+        }
     }
 }

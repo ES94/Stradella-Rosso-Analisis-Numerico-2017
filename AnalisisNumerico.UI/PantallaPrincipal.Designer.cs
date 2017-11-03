@@ -40,10 +40,9 @@
             this.btnRaices.BackColor = System.Drawing.Color.Black;
             this.btnRaices.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRaices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRaices.Location = new System.Drawing.Point(200, 28);
-            this.btnRaices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRaices.Location = new System.Drawing.Point(150, 23);
             this.btnRaices.Name = "btnRaices";
-            this.btnRaices.Size = new System.Drawing.Size(328, 98);
+            this.btnRaices.Size = new System.Drawing.Size(246, 80);
             this.btnRaices.TabIndex = 1;
             this.btnRaices.Text = "RAÍCES DE FUNCIONES";
             this.btnRaices.UseVisualStyleBackColor = false;
@@ -54,10 +53,9 @@
             this.btnSistemasEcuaciones.BackColor = System.Drawing.Color.Black;
             this.btnSistemasEcuaciones.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSistemasEcuaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSistemasEcuaciones.Location = new System.Drawing.Point(200, 154);
-            this.btnSistemasEcuaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSistemasEcuaciones.Location = new System.Drawing.Point(150, 125);
             this.btnSistemasEcuaciones.Name = "btnSistemasEcuaciones";
-            this.btnSistemasEcuaciones.Size = new System.Drawing.Size(328, 98);
+            this.btnSistemasEcuaciones.Size = new System.Drawing.Size(246, 80);
             this.btnSistemasEcuaciones.TabIndex = 2;
             this.btnSistemasEcuaciones.Text = "SISTEMAS DE ECUACIONES";
             this.btnSistemasEcuaciones.UseVisualStyleBackColor = false;
@@ -68,39 +66,37 @@
             this.btnRegresion.BackColor = System.Drawing.Color.Black;
             this.btnRegresion.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRegresion.Location = new System.Drawing.Point(200, 283);
-            this.btnRegresion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresion.Location = new System.Drawing.Point(150, 230);
             this.btnRegresion.Name = "btnRegresion";
-            this.btnRegresion.Size = new System.Drawing.Size(328, 98);
+            this.btnRegresion.Size = new System.Drawing.Size(246, 80);
             this.btnRegresion.TabIndex = 3;
             this.btnRegresion.Text = "REGRESIÓN E INTERPOLACIÓN";
             this.btnRegresion.UseVisualStyleBackColor = false;
+            this.btnRegresion.Click += new System.EventHandler(this.btnRegresion_Click);
             // 
             // btnIntegraacion
             // 
             this.btnIntegraacion.BackColor = System.Drawing.Color.Black;
             this.btnIntegraacion.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIntegraacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnIntegraacion.Location = new System.Drawing.Point(200, 411);
-            this.btnIntegraacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIntegraacion.Location = new System.Drawing.Point(150, 334);
             this.btnIntegraacion.Name = "btnIntegraacion";
-            this.btnIntegraacion.Size = new System.Drawing.Size(328, 98);
+            this.btnIntegraacion.Size = new System.Drawing.Size(246, 80);
             this.btnIntegraacion.TabIndex = 4;
             this.btnIntegraacion.Text = "INTEGRACIÓN NUMÉRICA";
             this.btnIntegraacion.UseVisualStyleBackColor = false;
             // 
             // PantallaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(763, 540);
+            this.ClientSize = new System.Drawing.Size(572, 439);
             this.Controls.Add(this.btnIntegraacion);
             this.Controls.Add(this.btnRegresion);
             this.Controls.Add(this.btnSistemasEcuaciones);
             this.Controls.Add(this.btnRaices);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PantallaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Análisis Numérico";

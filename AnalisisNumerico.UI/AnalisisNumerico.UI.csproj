@@ -80,6 +80,18 @@
     <Compile Include="RaicesIngresoDeDatos.Designer.cs">
       <DependentUpon>RaicesIngresoDeDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegInterIngresoDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegInterIngresoDatos.Designer.cs">
+      <DependentUpon>RegInterIngresoDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetodosRegresionInterpolacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetodosRegresionInterpolacion.Designer.cs">
+      <DependentUpon>MetodosRegresionInterpolacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="SistemasIngresoDeDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +118,12 @@
     </Compile>
     <EmbeddedResource Include="RaicesIngresoDeDatos.resx">
       <DependentUpon>RaicesIngresoDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegInterIngresoDatos.resx">
+      <DependentUpon>RegInterIngresoDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetodosRegresionInterpolacion.resx">
+      <DependentUpon>MetodosRegresionInterpolacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SistemasIngresoDeDatos.resx">
       <DependentUpon>SistemasIngresoDeDatos.cs</DependentUpon>
