@@ -39,7 +39,7 @@
             this.btnRegLinealMinCuad.Name = "btnRegLinealMinCuad";
             this.btnRegLinealMinCuad.Size = new System.Drawing.Size(204, 75);
             this.btnRegLinealMinCuad.TabIndex = 0;
-            this.btnRegLinealMinCuad.Text = "REGRESIÓN LINEAL POR MÍNIMOS CUADRADOS";
+            this.btnRegLinealMinCuad.Text = "Regresión lineal por mínimos cuadrados";
             this.btnRegLinealMinCuad.UseVisualStyleBackColor = true;
             this.btnRegLinealMinCuad.Click += new System.EventHandler(this.btnRegInter_Click);
             // 
@@ -49,7 +49,7 @@
             this.btnRegPoliMinCuad.Name = "btnRegPoliMinCuad";
             this.btnRegPoliMinCuad.Size = new System.Drawing.Size(204, 75);
             this.btnRegPoliMinCuad.TabIndex = 1;
-            this.btnRegPoliMinCuad.Text = "REGRESIÓN POLINOMIAL POR MÍNIMOS CUADRADOS";
+            this.btnRegPoliMinCuad.Text = "Regresión polinomial por mínimos cuadrados";
             this.btnRegPoliMinCuad.UseVisualStyleBackColor = true;
             this.btnRegPoliMinCuad.Click += new System.EventHandler(this.btnRegInter_Click);
             // 
@@ -59,11 +59,11 @@
             this.btnInterLagrange.Name = "btnInterLagrange";
             this.btnInterLagrange.Size = new System.Drawing.Size(204, 75);
             this.btnInterLagrange.TabIndex = 2;
-            this.btnInterLagrange.Text = "INTERPOLACIÓN DE LAGRANGE";
+            this.btnInterLagrange.Text = "Interpolación de Lagrange";
             this.btnInterLagrange.UseVisualStyleBackColor = true;
             this.btnInterLagrange.Click += new System.EventHandler(this.btnRegInter_Click);
             // 
-            // RegresionInterpolacion
+            // MetodosRegresionInterpolacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,8 +71,8 @@
             this.Controls.Add(this.btnInterLagrange);
             this.Controls.Add(this.btnRegPoliMinCuad);
             this.Controls.Add(this.btnRegLinealMinCuad);
-            this.Name = "RegresionInterpolacion";
-            this.Text = "RegresionInterpolacion";
+            this.Name = "MetodosRegresionInterpolacion";
+            this.Text = "Regresion e Interpolación";
             this.ResumeLayout(false);
 
         }

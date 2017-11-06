@@ -15,10 +15,10 @@ namespace AnalisisNumerico.UI
     {
         public RegInterIngresoDatos(string metodo)
         {
+            InitializeComponent();
+
             Metodo = metodo;
             Text += ": " + metodo;
-
-            InitializeComponent();
         }
 
         private string Metodo;
@@ -53,11 +53,11 @@ namespace AnalisisNumerico.UI
 
                 List<double> resultados = new List<double>();
 
-                if (Metodo == "REGRESIÓN LINEAL POR MÍNIMOS CUADRADOS")
+                if (Metodo == "Regresión lineal por mínimos cuadrados")
                 {
                     resultados = MetodosRegInterpolacion.RegLinealMinCuadrados(listaPuntos);
                 }
-                else if (Metodo == "REGRESIÓN POLINOMIAL POR MÍNIMOS CUADRADOS")
+                else if (Metodo == "Regresión polinomial por mínimos cuadrados")
                 {
                     resultados = MetodosRegInterpolacion.RegPoliMinCuadrados(listaPuntos);
                 }
@@ -68,13 +68,34 @@ namespace AnalisisNumerico.UI
 
                 string mensaje = "Resultados:";
 
-                for (int i = 0; i < resultados.Count - 1; i++)
+                if (resultados.Count > 1)
                 {
-                    mensaje += string.Format("\na{0} = {1}", i, resultados[i]);
-                }
+                    if (resultados.Count > 3)
+                    {
+                        for (int i = 0; i < resultados.Count - 2; i++)
+                        {
+                            mensaje += string.Format("\na{0} = {1}", i, resultados[i]);
+                        }
 
-                mensaje += string.Format("\n\nNivel de ajuste: {0}%\nEl ajuste es {1}.", resultados[resultados.Count - 1], 
-                    resultados[resultados.Count - 1] < 80 ? "POBRE" : "BUENO");
+                        mensaje += string.Format("\n\nNivel de ajuste: {0}%\nEl ajuste es {1}.\nGrado de la " +
+                            "curva de ajuste: {2}", resultados[resultados.Count - 1],
+                            resultados[resultados.Count - 2] < 80 ? "POBRE" : "BUENO", resultados[resultados.Count - 1]);
+                    }
+                    else
+                    {
+                        for (int i = 0; i < resultados.Count - 1; i++)
+                        {
+                            mensaje += string.Format("\na{0} = {1}", i, resultados[i]);
+                        }
+
+                        mensaje += string.Format("\n\nNivel de ajuste: {0}%\nEl ajuste es {1}.", resultados[resultados.Count - 1],
+                            resultados[resultados.Count - 1] < 80 ? "POBRE" : "BUENO");
+                    }
+                }
+                else
+                {
+                    mensaje = "No se encontraron resultados. Límite de iteraciones excedido.";
+                }
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
