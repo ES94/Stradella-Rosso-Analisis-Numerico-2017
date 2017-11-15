@@ -36,6 +36,10 @@
             this.txtCantPts = new System.Windows.Forms.TextBox();
             this.lblCantPts = new System.Windows.Forms.Label();
             this.btnLimpiarGrilla = new System.Windows.Forms.Button();
+            this.txtValorInteg = new System.Windows.Forms.TextBox();
+            this.lblValorInteg = new System.Windows.Forms.Label();
+            this.lblGradoIni = new System.Windows.Forms.Label();
+            this.txtGradoIni = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,11 +115,48 @@
             this.btnLimpiarGrilla.UseVisualStyleBackColor = true;
             this.btnLimpiarGrilla.Click += new System.EventHandler(this.btnLimpiarGrilla_Click);
             // 
+            // txtValorInteg
+            // 
+            this.txtValorInteg.Location = new System.Drawing.Point(305, 81);
+            this.txtValorInteg.Name = "txtValorInteg";
+            this.txtValorInteg.Size = new System.Drawing.Size(100, 20);
+            this.txtValorInteg.TabIndex = 8;
+            // 
+            // lblValorInteg
+            // 
+            this.lblValorInteg.AutoSize = true;
+            this.lblValorInteg.Location = new System.Drawing.Point(305, 65);
+            this.lblValorInteg.Name = "lblValorInteg";
+            this.lblValorInteg.Size = new System.Drawing.Size(81, 13);
+            this.lblValorInteg.TabIndex = 9;
+            this.lblValorInteg.Text = "Valor a integrar:";
+            // 
+            // lblGradoIni
+            // 
+            this.lblGradoIni.AutoSize = true;
+            this.lblGradoIni.Location = new System.Drawing.Point(305, 65);
+            this.lblGradoIni.Name = "lblGradoIni";
+            this.lblGradoIni.Size = new System.Drawing.Size(81, 13);
+            this.lblGradoIni.TabIndex = 10;
+            this.lblGradoIni.Text = "Grado de inicio:";
+            // 
+            // txtGradoIni
+            // 
+            this.txtGradoIni.Location = new System.Drawing.Point(305, 81);
+            this.txtGradoIni.Name = "txtGradoIni";
+            this.txtGradoIni.Size = new System.Drawing.Size(100, 20);
+            this.txtGradoIni.TabIndex = 11;
+            this.txtGradoIni.Text = "2";
+            // 
             // RegInterIngresoDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 371);
+            this.Controls.Add(this.txtGradoIni);
+            this.Controls.Add(this.lblGradoIni);
+            this.Controls.Add(this.lblValorInteg);
+            this.Controls.Add(this.txtValorInteg);
             this.Controls.Add(this.btnLimpiarGrilla);
             this.Controls.Add(this.lblCantPts);
             this.Controls.Add(this.txtCantPts);
@@ -142,5 +183,9 @@
         private System.Windows.Forms.TextBox txtCantPts;
         private System.Windows.Forms.Label lblCantPts;
         private System.Windows.Forms.Button btnLimpiarGrilla;
+        private System.Windows.Forms.TextBox txtValorInteg;
+        private System.Windows.Forms.Label lblValorInteg;
+        private System.Windows.Forms.Label lblGradoIni;
+        private System.Windows.Forms.TextBox txtGradoIni;
     }
 }

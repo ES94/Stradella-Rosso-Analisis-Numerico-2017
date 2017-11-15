@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MetodosIntegracion.cs" />
+    <Compile Include="MetodosIntegNum.cs" />
     <Compile Include="MetodosRaices.cs" />
     <Compile Include="MetodosRegInterpolacion.cs" />
     <Compile Include="MetodosSistEcuaciones.cs" />

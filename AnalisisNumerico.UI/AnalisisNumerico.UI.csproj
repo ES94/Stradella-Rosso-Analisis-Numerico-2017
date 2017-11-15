@@ -54,6 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntegracionIngresoDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegracionIngresoDatos.Designer.cs">
+      <DependentUpon>IntegracionIngresoDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetodosIntegracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetodosIntegracion.Designer.cs">
+      <DependentUpon>MetodosIntegracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetodosRaices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     <Compile Include="SistemasIngresoDeDatos.Designer.cs">
       <DependentUpon>SistemasIngresoDeDatos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="IntegracionIngresoDatos.resx">
+      <DependentUpon>IntegracionIngresoDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetodosIntegracion.resx">
+      <DependentUpon>MetodosIntegracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MetodosRaices.resx">
       <DependentUpon>MetodosRaices.cs</DependentUpon>
     </EmbeddedResource>

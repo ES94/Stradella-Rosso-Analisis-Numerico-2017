@@ -18,7 +18,7 @@ namespace AnalisisNumerico.Metodos
             int n = listaPuntos.Count;
             List<double> resultados = new List<double>();
 
-            double a1 = (n * listaPuntos.Sum(punto => punto.X * punto.Y) - listaPuntos.Sum(punto => punto.X) * listaPuntos.Sum(punto => punto.Y)) / 
+            double a1 = (n * listaPuntos.Sum(punto => punto.X * punto.Y) - listaPuntos.Sum(punto => punto.X) * listaPuntos.Sum(punto => punto.Y)) /
                 (n * listaPuntos.Sum(punto => Math.Pow(punto.X, 2)) - Math.Pow(listaPuntos.Sum(punto => punto.X), 2));
             double a0 = listaPuntos.Average(punto => punto.Y) - a1 * listaPuntos.Average(punto => punto.X);
             double st = listaPuntos.Sum(punto => Math.Pow(listaPuntos.Average(pt => pt.Y) - punto.Y, 2));
@@ -32,9 +32,9 @@ namespace AnalisisNumerico.Metodos
             return resultados;
         }
 
-        public static List<double> RegPoliMinCuadrados(List<Punto> listaPuntos)
+        public static List<double> RegPoliMinCuadrados(List<Punto> listaPuntos, int gradoInicio)
         {
-            int grado = 2;
+            int grado = gradoInicio;
             int n = listaPuntos.Count;
             List<double> resultados = new List<double>();
 
@@ -95,11 +95,27 @@ namespace AnalisisNumerico.Metodos
             return resultados;
         }
 
-        public static List<double> InterpolacionLagrange()
+        public static decimal InterpolacionLagrange(List<Punto> listaPuntos, double X)
         {
-            List<double> resultados = new List<double>();
+            int n = listaPuntos.Count;
+            double resultado = 0;
 
-            return resultados;
+            for (int j = 0; j < n; j++)
+            {
+                double productoria = 1;
+                
+                for (int i = 0; i < n; i++)
+                {
+                    if (i != j)
+                    {
+                        productoria *= ((X - listaPuntos[i].X) / (listaPuntos[j].X - listaPuntos[i].X));
+                    }
+                }
+
+                resultado += listaPuntos[j].Y * productoria;
+            }
+
+            return Convert.ToDecimal(resultado);
         }
     }
 

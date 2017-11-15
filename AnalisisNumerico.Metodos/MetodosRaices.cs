@@ -67,7 +67,6 @@ namespace AnalisisNumerico.Metodos
             return resultado;
         }
 
-
         public static double? ReglaFalsa(string funcion, double Xi, double Xd)
         {
             double? resultado = null;
@@ -122,7 +121,7 @@ namespace AnalisisNumerico.Metodos
         {
             double Derivada;
             double Anterior;
-            /// CASO 1
+            
             if ((ImagenDe(funcion, XINI + 0.0001) - ImagenDe(funcion, XINI)) / 0.0001 == 0)
             {
                 Derivada = 0.0001;
@@ -212,15 +211,15 @@ namespace AnalisisNumerico.Metodos
         /// Devuelve la imagen de una función pasada como parámetro, evaluada en la variable pasada como parámetro.
         /// </summary>
         /// <param name="f">Función a ser evaluada.</param>
-        /// <param name="x">Variable con la cuál la función será evaluada.</param>
-        private static double ImagenDe(string f, double x)
+        /// <param name="x">Valor con la cuál la función será evaluada.</param>
+        public static double ImagenDe(string f, double x)
         {
             return new Function(f).calculate(x);
         }
 
-        public static double Funcion(double x)
+        public static double ImagenDe(Function f, double x)
         {
-            return 4 - (1/(x*x)) - 2 * Math.Log(x);
+            return f.calculate(x);
         }
     }
 }

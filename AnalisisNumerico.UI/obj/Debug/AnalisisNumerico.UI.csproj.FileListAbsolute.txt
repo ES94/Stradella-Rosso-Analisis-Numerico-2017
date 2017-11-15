@@ -64,3 +64,5 @@ C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Anali
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\Analisis Numerico\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.SistemasIngresoDeDatos.resources
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.RegInterIngresoDatos.resources
 C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.MetodosRegresionInterpolacion.resources
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.IntegracionIngresoDatos.resources
+C:\Users\estra\Documents\UCSE\Análisis Numérico\2017\Stradella-Rosso-Analisis-Numerico-2017\AnalisisNumerico.UI\obj\Debug\AnalisisNumerico.UI.MetodosIntegracion.resources

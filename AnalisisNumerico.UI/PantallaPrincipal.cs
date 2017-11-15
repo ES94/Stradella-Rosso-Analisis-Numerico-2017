@@ -41,5 +41,11 @@ namespace AnalisisNumerico.UI
             MetodosRegresionInterpolacion FormRegInter = new MetodosRegresionInterpolacion();
             FormRegInter.Show();
         }
+
+        private void btnIntegraacion_Click(object sender, EventArgs e)
+        {
+            MetodosIntegracion FormIntegracion = new MetodosIntegracion();
+            FormIntegracion.Show();
+        }
     }
 }

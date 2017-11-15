@@ -19,6 +19,28 @@ namespace AnalisisNumerico.UI
 
             Metodo = metodo;
             Text += ": " + metodo;
+
+            if (metodo == "Interpolación de Lagrange")
+            {
+                lblValorInteg.Visible = true;
+                txtValorInteg.Visible = true;
+            }
+            else
+            {
+                lblValorInteg.Visible = false;
+                txtValorInteg.Visible = false;
+            }
+
+            if (metodo == "Regresión polinomial por mínimos cuadrados")
+            {
+                lblGradoIni.Visible = true;
+                txtGradoIni.Visible = true;
+            }
+            else
+            {
+                lblGradoIni.Visible = false;
+                txtGradoIni.Visible = false;
+            }
         }
 
         private string Metodo;
@@ -52,6 +74,7 @@ namespace AnalisisNumerico.UI
                 }
 
                 List<double> resultados = new List<double>();
+                decimal resultado = 0;
 
                 if (Metodo == "Regresión lineal por mínimos cuadrados")
                 {
@@ -59,30 +82,18 @@ namespace AnalisisNumerico.UI
                 }
                 else if (Metodo == "Regresión polinomial por mínimos cuadrados")
                 {
-                    resultados = MetodosRegInterpolacion.RegPoliMinCuadrados(listaPuntos);
+                    resultados = MetodosRegInterpolacion.RegPoliMinCuadrados(listaPuntos, Convert.ToInt32(txtGradoIni.Text));
                 }
                 else
                 {
-                    resultados = MetodosRegInterpolacion.InterpolacionLagrange();
+                    resultado = MetodosRegInterpolacion.InterpolacionLagrange(listaPuntos, Convert.ToDouble(txtValorInteg.Text));
                 }
 
-                string mensaje = "Resultados:";
+                string mensaje = "Resultado:";
 
-                if (resultados.Count > 1)
+                switch (Metodo)
                 {
-                    if (resultados.Count > 3)
-                    {
-                        for (int i = 0; i < resultados.Count - 2; i++)
-                        {
-                            mensaje += string.Format("\na{0} = {1}", i, resultados[i]);
-                        }
-
-                        mensaje += string.Format("\n\nNivel de ajuste: {0}%\nEl ajuste es {1}.\nGrado de la " +
-                            "curva de ajuste: {2}", resultados[resultados.Count - 1],
-                            resultados[resultados.Count - 2] < 80 ? "POBRE" : "BUENO", resultados[resultados.Count - 1]);
-                    }
-                    else
-                    {
+                    case "Regresión lineal por mínimos cuadrados":
                         for (int i = 0; i < resultados.Count - 1; i++)
                         {
                             mensaje += string.Format("\na{0} = {1}", i, resultados[i]);
@@ -90,11 +101,25 @@ namespace AnalisisNumerico.UI
 
                         mensaje += string.Format("\n\nNivel de ajuste: {0}%\nEl ajuste es {1}.", resultados[resultados.Count - 1],
                             resultados[resultados.Count - 1] < 80 ? "POBRE" : "BUENO");
-                    }
-                }
-                else
-                {
-                    mensaje = "No se encontraron resultados. Límite de iteraciones excedido.";
+
+                        break;
+
+                    case "Regresión polinomial por mínimos cuadrados":
+                        for (int i = 0; i < resultados.Count - 2; i++)
+                        {
+                            mensaje += string.Format("\na{0} = {1}", i, resultados[i]);
+                        }
+
+                        mensaje += string.Format("\n\nNivel de ajuste: {0}%\nEl ajuste es {1}.\nGrado de la " +
+                            "curva de ajuste: {2}", resultados[resultados.Count - 2],
+                            resultados[resultados.Count - 2] < 80 ? "POBRE" : "BUENO", resultados[resultados.Count - 1]);
+
+                        break;
+
+                    case "Interpolación de Lagrange":
+                        mensaje += string.Format("\nY = {0}", resultado);
+
+                        break;
                 }
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -85,6 +85,7 @@
             this.btnIntegraacion.TabIndex = 4;
             this.btnIntegraacion.Text = "INTEGRACIÓN NUMÉRICA";
             this.btnIntegraacion.UseVisualStyleBackColor = false;
+            this.btnIntegraacion.Click += new System.EventHandler(this.btnIntegraacion_Click);
             // 
             // PantallaPrincipal
             // 
